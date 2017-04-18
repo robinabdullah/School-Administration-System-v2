@@ -1,0 +1,20 @@
+﻿<Controls:MetroWindow x:Class="School_Administration_System_v2.PL.HR"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+        xmlns:Dialogs="clr-namespace:MahApps.Metro.Controls.Dialogs;assembly=MahApps.Metro"
+        WindowStartupLocation="Manual" 
+        Left="0" Top="0"
+        Title="School Administration System" Height="700" Width="1167" MaxHeight="700" MaxWidth="1167" MinHeight="700" MinWidth="1167">
+    <Grid>
+        <Button Content="Back" HorizontalAlignment="Left" Margin="385,543,0,0" VerticalAlignment="Top" Width="391" Height="71" FontSize="26" Click="Button_Back"/>
+        <Button Content="Admin Body Recruitment" HorizontalAlignment="Left" Margin="138,182,0,0" VerticalAlignment="Top" Width="415" Height="93" FontSize="26" Click="Button_Admin_Body_Recruitment" TextOptions.TextFormattingMode="Display"/>
+        <Button Content="Teacher Recruitment" HorizontalAlignment="Left" Margin="608,182,0,0" VerticalAlignment="Top" Width="415" Height="93" FontSize="26" Click="Button_Teacher_Recruitment"/>
+        <Button Content="Staff Recruitment" HorizontalAlignment="Left" Margin="138,293,0,0" VerticalAlignment="Top" Width="415" Height="93" FontSize="26" Click="Button_Staff_Recruitment"/>
+        <Button Content="EDIT Profile" HorizontalAlignment="Left" Margin="138,405,0,0" VerticalAlignment="Top" Width="415" Height="93" FontSize="26" Click="Button_Assign_Courses_To_Teacher"/>
+        <Button Content="Organizational Profile" HorizontalAlignment="Left" Margin="608,293,0,0" VerticalAlignment="Top" Width="415" Height="93" FontSize="26" Click="Button_Organizational_Profile"/>
+        <Button Content="Employees Task Assignment" HorizontalAlignment="Left" Margin="608,405,0,0" VerticalAlignment="Top" Width="415" Height="93" FontSize="26" Click="Button_Employees_Task_Assignment"/>
+        <Label x:Name="label" Content="HR" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="120" Width="296" FontSize="96" FontWeight="Bold" FontFamily="Arial"/>
+
+    </Grid>
+</Controls:MetroWindow>

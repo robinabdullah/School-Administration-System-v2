@@ -1,0 +1,356 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{56BEEA7C-FBB9-4245-A3CB-78ED8D917A94}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>School_Administration_System_v2</RootNamespace>
+    <AssemblyName>School Administration System v2</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MahApps.Metro, Version=1.5.0.23, Culture=neutral, PublicKeyToken=f4fb5a3c4d1e5b4f, processorArchitecture=MSIL">
+      <HintPath>..\packages\MahApps.Metro.1.5.0\lib\net45\MahApps.Metro.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Windows.Interactivity, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\MahApps.Metro.1.5.0\lib\net45\System.Windows.Interactivity.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BL\BClasses.cs" />
+    <Compile Include="BL\BusinessRules.cs" />
+    <Compile Include="BL\DG.cs" />
+    <Compile Include="BL\Login.cs" />
+    <Compile Include="DAL\DataAccessClass.cs" />
+    <Compile Include="DAL\DataAccessClassLinq.cs" />
+    <Compile Include="DAL\DataClassesLinq.cs">
+      <DependentUpon>DataClassesLinq.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\DataClassesLinq.designer.cs">
+      <DependentUpon>DataClassesLinq.dbml</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="DAL\interfaceClasses.cs" />
+    <Compile Include="DAL\IntImplementation.cs" />
+    <Compile Include="PL\Academics.xaml.cs">
+      <DependentUpon>Academics.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PL\Admission Eligibility.xaml.cs">
+      <DependentUpon>Admission Eligibility.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PL\Admission.xaml.cs">
+      <DependentUpon>Admission.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PL\Admit Student.xaml.cs">
+      <DependentUpon>Admit Student.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PL\App.xaml.cs" />
+    <Compile Include="PL\Benefits.xaml.cs">
+      <DependentUpon>Benefits.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PL\Delete Profile.xaml.cs">
+      <DependentUpon>Delete Profile.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PL\ECRoom101.xaml.cs">
+      <DependentUpon>ECRoom101.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PL\Edit Profile.xaml.cs">
+      <DependentUpon>Edit Profile.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PL\Eligible Student List.xaml.cs">
+      <DependentUpon>Eligible Student List.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PL\Employee Task Assignment.xaml.cs">
+      <DependentUpon>Employee Task Assignment.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PL\Employee_Benefits.xaml.cs">
+      <DependentUpon>Employee_Benefits.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PL\Employee_Benefits_Advanced_Salary.xaml.cs">
+      <DependentUpon>Employee_Benefits_Advanced_Salary.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PL\Employee_Benefits_Gratuity.xaml.cs">
+      <DependentUpon>Employee_Benefits_Gratuity.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PL\Exam Control.xaml.cs">
+      <DependentUpon>Exam Control.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PL\Home Screen.xaml.cs">
+      <DependentUpon>Home Screen.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PL\HR Admin Body Recruitment.xaml.cs">
+      <DependentUpon>HR Admin Body Recruitment.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PL\HR Teacher Recruitment.xaml.cs">
+      <DependentUpon>HR Teacher Recruitment.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PL\HR.xaml.cs">
+      <DependentUpon>HR.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PL\Inventory.xaml.cs">
+      <DependentUpon>Inventory.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PL\MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PL\New Student.xaml.cs">
+      <DependentUpon>New Student.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PL\Organizational Profile.xaml.cs">
+      <DependentUpon>Organizational Profile.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PL\Pay Tution.xaml.cs">
+      <DependentUpon>Pay Tution.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PL\Seat Plan.xaml.cs">
+      <DependentUpon>Seat Plan.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PL\Staff Recruitment.xaml.cs">
+      <DependentUpon>Staff Recruitment.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PL\Student Benefits Discount.xaml.cs">
+      <DependentUpon>Student Benefits Discount.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PL\Student Benefits Scholarship.xaml.cs">
+      <DependentUpon>Student Benefits Scholarship.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PL\Student Benefits.xaml.cs">
+      <DependentUpon>Student Benefits.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PL\Viva Exam Management.xaml.cs">
+      <DependentUpon>Viva Exam Management.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PL\Written Exam Management.xaml.cs">
+      <DependentUpon>Written Exam Management.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="DAL\DataClassesLinq.dbml.layout">
+      <DependentUpon>DataClassesLinq.dbml</DependentUpon>
+    </None>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="DAL\DataClassesLinq.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>DataClassesLinq.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="PL\Academics.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PL\Admission Eligibility.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PL\Admission.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PL\Admit Student.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PL\Benefits.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PL\Delete Profile.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PL\ECRoom101.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PL\Edit Profile.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PL\Eligible Student List.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PL\Employee Task Assignment.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PL\Employee_Benefits.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PL\Employee_Benefits_Advanced_Salary.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PL\Employee_Benefits_Gratuity.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PL\Exam Control.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PL\Home Screen.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PL\HR Admin Body Recruitment.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PL\HR Teacher Recruitment.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PL\HR.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PL\Inventory.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PL\MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PL\New Student.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PL\Organizational Profile.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PL\Pay Tution.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PL\Seat Plan.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PL\Staff Recruitment.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PL\Student Benefits Discount.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PL\Student Benefits Scholarship.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PL\Student Benefits.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PL\Viva Exam Management.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PL\Written Exam Management.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="PL\54906.png" />
+    <Resource Include="PL\fcaM4Mo.jpg" />
+    <Resource Include="PL\sami.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="fcaM4Mo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

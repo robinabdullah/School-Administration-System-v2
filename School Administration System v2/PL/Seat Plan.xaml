@@ -1,0 +1,37 @@
+﻿<Controls:MetroWindow x:Class="School_Administration_System_v2.PL.Seat_Plan"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+        xmlns:Dialogs="clr-namespace:MahApps.Metro.Controls.Dialogs;assembly=MahApps.Metro"
+        WindowStartupLocation="Manual" 
+        Left="0" Top="0"
+        Title="School Administration System" Height="700" Width="1167" MaxHeight="700" MaxWidth="1167" MinHeight="700" MinWidth="1167">
+    <Grid>
+        <Image x:Name="___School_Administration_System_v2_component_fcaM4Mo_jpg" Margin="0,0,-0.2,-0.2" Source="/School Administration System v2;component/fcaM4Mo.jpg" Stretch="Fill"/>
+
+        <TextBlock x:Name="textBlock_Copy1" HorizontalAlignment="Left" Margin="67,10,0,0" TextWrapping="Wrap" Text="SEAT PLAN" VerticalAlignment="Top" Height="130" Width="601" FontSize="100" FontWeight="Bold" TextDecorations="{x:Null}"/>
+        <Button Content="" HorizontalAlignment="Left" Margin="968,31,0,0" VerticalAlignment="Top" Width="137" Height="109" FontSize="26" Click="Button_Back" BorderBrush="{x:Null}">
+            <Button.Background>
+                <ImageBrush ImageSource="54906.png" Stretch="Uniform"/>
+            </Button.Background>
+        </Button>
+
+        <Button Content="R-101" HorizontalAlignment="Left" Margin="146,214,0,0" VerticalAlignment="Top" Width="138" Height="65" FontSize="26" Click="Button_Accounts"/>
+        <Button Content="R-102" HorizontalAlignment="Left" Margin="388,214,0,0" VerticalAlignment="Top" Width="138" Height="65" FontSize="26" Click="Button_Accounts"/>
+        <Button Content="R-103" HorizontalAlignment="Left" Margin="630,214,0,0" VerticalAlignment="Top" Width="138" Height="65" FontSize="26" Click="Button_Accounts"/>
+        <Button Content="R-104" HorizontalAlignment="Left" Margin="874,214,0,0" VerticalAlignment="Top" Width="138" Height="65" FontSize="26" Click="Button_Accounts"/>
+        <Button Content="R-201" HorizontalAlignment="Left" Margin="146,323,0,0" VerticalAlignment="Top" Width="138" Height="65" FontSize="26" Click="Button_Accounts"/>
+        <Button Content="R-202" HorizontalAlignment="Left" Margin="388,323,0,0" VerticalAlignment="Top" Width="138" Height="65" FontSize="26" Click="Button_Accounts"/>
+        <Button Content="R-203" HorizontalAlignment="Left" Margin="630,323,0,0" VerticalAlignment="Top" Width="138" Height="65" FontSize="26" Click="Button_Accounts"/>
+        <Button Content="R-204" HorizontalAlignment="Left" Margin="874,323,0,0" VerticalAlignment="Top" Width="138" Height="65" FontSize="26" Click="Button_Accounts"/>
+        <Button Content="R-301" HorizontalAlignment="Left" Margin="146,432,0,0" VerticalAlignment="Top" Width="138" Height="65" FontSize="26" Click="Button_Accounts"/>
+        <Button Content="R-302" HorizontalAlignment="Left" Margin="388,432,0,0" VerticalAlignment="Top" Width="138" Height="65" FontSize="26" Click="Button_Accounts"/>
+        <Button Content="R-303" HorizontalAlignment="Left" Margin="630,432,0,0" VerticalAlignment="Top" Width="138" Height="65" FontSize="26" Click="Button_Accounts"/>
+        <Button Content="R-304" HorizontalAlignment="Left" Margin="874,432,0,0" VerticalAlignment="Top" Width="138" Height="65" FontSize="26" Click="Button_Accounts"/>
+        <Button Content="R-401" HorizontalAlignment="Left" Margin="146,541,0,0" VerticalAlignment="Top" Width="138" Height="65" FontSize="26" Click="Button_Accounts"/>
+        <Button Content="R-402" HorizontalAlignment="Left" Margin="388,541,0,0" VerticalAlignment="Top" Width="138" Height="65" FontSize="26" Click="Button_Accounts"/>
+        <Button Content="R-403" HorizontalAlignment="Left" Margin="630,541,0,0" VerticalAlignment="Top" Width="138" Height="65" FontSize="26" Click="Button_Accounts"/>
+        <Button Content="R-404" HorizontalAlignment="Left" Margin="874,541,0,0" VerticalAlignment="Top" Width="138" Height="65" FontSize="26" Click="Button_Accounts"/>
+
+    </Grid>
+</Controls:MetroWindow>

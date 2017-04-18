@@ -1,0 +1,29 @@
+﻿<Controls:MetroWindow x:Class="School_Administration_System_v2.PL.Admission"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+        xmlns:Dialogs="clr-namespace:MahApps.Metro.Controls.Dialogs;assembly=MahApps.Metro"
+        WindowStartupLocation="Manual" 
+        Left="0" Top="0"
+        Title="School Administration System" Height="700" Width="1167" MaxHeight="700" MaxWidth="1167" MinHeight="700" MinWidth="1167">
+    <Grid>
+        <Dialogs:CustomDialog Content="ADMISSION" VerticalAlignment="Top" FontSize="90" Margin="-155,2,246.8,0" VerticalContentAlignment="Center" RenderTransformOrigin="0.5,0.5" Width="1069" FontFamily="Segoe UI Black" Height="149" FontWeight="Bold" HorizontalAlignment="Right" HorizontalContentAlignment="Center">
+            <Dialogs:CustomDialog.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Dialogs:CustomDialog.RenderTransform>
+        </Dialogs:CustomDialog>
+        <Button Content="Admission Test" HorizontalAlignment="Left" Margin="67,231,0,0" VerticalAlignment="Top" Width="297" Height="93" FontSize="20" Click="Button_Student_Admission"/>
+        <Button Content="Written Exam Management" HorizontalAlignment="Left" Margin="419,358,0,0" VerticalAlignment="Top" Width="336" Height="93" FontSize="20" Click="Button_Written_Exam_Management"/>
+        <Button Content="Viva Exam Management" HorizontalAlignment="Left" Margin="67,358,0,0" VerticalAlignment="Top" Width="297" Height="93" FontSize="20" Click="Button_Viva_Exam_Management"/>
+        <Button Content="Admission Eligibility" HorizontalAlignment="Left" Margin="419,231,0,0" VerticalAlignment="Top" Width="336" Height="93" FontSize="20" Click="Button_Result_Management"/>
+        <Button Content="BACK" HorizontalAlignment="Left" Margin="387,543,0,0" VerticalAlignment="Top" Width="391" Height="71" FontSize="26" Click="Button_Back"/>
+        <Button Content="ADMISSION STUDENT LIST" HorizontalAlignment="Left" Margin="811,231,0,0" VerticalAlignment="Top" Width="297" Height="93" FontSize="20" Click="Eligible_Student_List"/>
+        <Button Content="New Student" HorizontalAlignment="Left" Margin="811,358,0,0" VerticalAlignment="Top" Width="297" Height="93" FontSize="20" Click="Admit_New_Student"/>
+
+    </Grid>
+</Controls:MetroWindow>

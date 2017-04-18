@@ -1,0 +1,167 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="StudentDB" Class="DataClassesLinqDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-5BN9EJ4\SQLEXPRESS;Initial Catalog=StudentDB;Integrated Security=True;Encrypt=False;TrustServerCertificate=True" SettingsObjectName="School_Administration_System_v2.Properties.Settings" SettingsPropertyName="StudentDBConnectionString3" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Admission_Exam_Result" Member="Admission_Exam_Results">
+    <Type Name="Admission_Exam_Result">
+      <Column Name="Admission_Exam_ID" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Admission_Student_ID" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Writtern_Exam_Mark" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Viva_Exam_Mark" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Written_Examiner_ID" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Viva_Examiner_ID" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Association Name="Admission_Student_Admission_Exam_Result" Member="Admission_Student" ThisKey="Admission_Student_ID" OtherKey="Admission_Student_ID" Type="Admission_Student" IsForeignKey="true" />
+      <Association Name="Teacher_Admission_Exam_Result" Member="Teacher" ThisKey="Viva_Examiner_ID" OtherKey="Teacher_ID" Type="Teacher" IsForeignKey="true" />
+      <Association Name="Teacher_Admission_Exam_Result1" Member="Teacher1" ThisKey="Written_Examiner_ID" OtherKey="Teacher_ID" Type="Teacher" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Admission_Student" Member="Admission_Students">
+    <Type Name="Admission_Student">
+      <Column Name="Admission_Student_ID" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="First_Name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Last_Name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Full_Name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Gender" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Fathers_Name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Mothers_Name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Address" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Mobile" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="DOB" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="Blood_Group" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Country" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Religion" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Admission_Session" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Current_School" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Current_Grade" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Interested_Grade" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="[Group]" Member="Group" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Registered_Date" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Association Name="Admission_Student_Admission_Exam_Result" Member="Admission_Exam_Results" ThisKey="Admission_Student_ID" OtherKey="Admission_Student_ID" Type="Admission_Exam_Result" />
+      <Association Name="Admission_Student_Student" Member="Students" ThisKey="Admission_Student_ID" OtherKey="Admissin_Student_ID" Type="Student" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Teacher" Member="Teachers">
+    <Type Name="Teacher">
+      <Column Name="Teacher_ID" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="First_Name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Last_Name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Full_Name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Gender" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Fathers_Name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Mothers_Name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Address" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Mobile" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="DOB" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="Blood_Group" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Country" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Religoin" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Recruited_Session" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="[Group]" Member="Group" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Designation" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Status" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Status_Time_From" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="Status_Time_To" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="Last_Login_Date" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="Pasword" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Joined_Date" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="Resigned_Date" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="Marital_Status" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Association Name="Teacher_Admission_Exam_Result" Member="Admission_Exam_Results" ThisKey="Teacher_ID" OtherKey="Viva_Examiner_ID" Type="Admission_Exam_Result" />
+      <Association Name="Teacher_Admission_Exam_Result1" Member="Admission_Exam_Results1" ThisKey="Teacher_ID" OtherKey="Written_Examiner_ID" Type="Admission_Exam_Result" />
+      <Association Name="Teacher_Teacher_Task" Member="Teacher_Tasks" ThisKey="Teacher_ID" OtherKey="Teacher_ID" Type="Teacher_Task" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Student" Member="Students">
+    <Type Name="Student">
+      <Column Name="Student_ID" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Admissin_Student_ID" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Student_Status" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Association Name="Student_Student_Regular_Fee" Member="Student_Regular_Fees" ThisKey="Student_ID" OtherKey="Student_ID" Type="Student_Regular_Fee" />
+      <Association Name="Admission_Student_Student" Member="Admission_Student" ThisKey="Admissin_Student_ID" OtherKey="Admission_Student_ID" Type="Admission_Student" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Tracker" Member="Trackers">
+    <Type Name="Tracker">
+      <Column Name="Traking_Name" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Tracking_Number" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Inventory" Member="Inventories">
+    <Type Name="Inventory">
+      <Column Name="Inventory_ID" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Printer" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Computer" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Mouse" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Keyboard" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Projector" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Camera" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Whiteboard" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Marker" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Pencil" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Clock" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Paperbundle" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Pen" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Duster" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Geometrybox" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Ruler" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Chair" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Bench" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="[Table]" Member="Table" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Admin" Member="Admins">
+    <Type Name="Admin">
+      <Column Name="Admin_ID" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Admin_Role" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="First_Name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Last_Name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Full_Name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Gender" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Fathers_Name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Mothers_Name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Address" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Mobile" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="DOB" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="Blood_Group" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Country" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Religoin" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Recruited_Session" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Designation" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Status" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Marital_Status" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Status_Time_From" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="Status_Time_To" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="Last_Login_Date" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="Pasword" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Joined_Date" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="Resigned_Date" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Teacher_Task" Member="Teacher_Tasks">
+    <Type Name="Teacher_Task">
+      <Column Name="Task_ID" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Teacher_ID" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Association Name="Teacher_Teacher_Task" Member="Teacher" ThisKey="Teacher_ID" OtherKey="Teacher_ID" Type="Teacher" IsForeignKey="true" />
+      <Association Name="Task_Teacher_Task" Member="Task" ThisKey="Task_ID" OtherKey="Task_ID" Type="Task" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Task" Member="Tasks">
+    <Type Name="Task">
+      <Column Name="Task_ID" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TaskType" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Task_Description" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="Assigned_Date" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="Deadline" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="Completion_Date" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Association Name="Task_Teacher_Task" Member="Teacher_Task" ThisKey="Task_ID" OtherKey="Task_ID" Type="Teacher_Task" Cardinality="One" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Student_Regular_Fees" Member="Student_Regular_Fees">
+    <Type Name="Student_Regular_Fee">
+      <Column Name="Student_ID" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Regular_Fees_ID" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Association Name="Student_Student_Regular_Fee" Member="Student" ThisKey="Student_ID" OtherKey="Student_ID" Type="Student" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>

@@ -1,0 +1,19 @@
+﻿<Controls:MetroWindow x:Class="School_Administration_System_v2.PL.Eligible_Student_List"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+        xmlns:Dialogs="clr-namespace:MahApps.Metro.Controls.Dialogs;assembly=MahApps.Metro"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:School_Administration_System_v2.PL"
+        mc:Ignorable="d"
+        Title="Eligible Student List" Height="700" Width="1167" MaxHeight="700" MaxWidth="1167" MinHeight="700" MinWidth="1167">
+    <Grid>
+        <Label x:Name="label" Content="Admission Student List" HorizontalAlignment="Left" Margin="28,10,0,0" VerticalAlignment="Top" Height="99" Width="741" FontSize="64" FontWeight="Bold"/>
+        <DataGrid x:Name="dataGrid" HorizontalAlignment="Left" Margin="10,109,0,0" VerticalAlignment="Top" Height="452" Width="1141" ItemsSource="{Binding }">
+            
+
+        </DataGrid>
+        <Button Content="Back" HorizontalAlignment="Left" Margin="398,581,0,0" VerticalAlignment="Top" Width="391" Height="71" FontSize="26" Click="Button_Back"/>
+    </Grid>
+</Controls:MetroWindow>

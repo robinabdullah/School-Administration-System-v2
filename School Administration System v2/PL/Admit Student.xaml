@@ -1,0 +1,43 @@
+﻿<Controls:MetroWindow x:Class="School_Administration_System_v2.PL.Admit_Student"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+        xmlns:Dialogs="clr-namespace:MahApps.Metro.Controls.Dialogs;assembly=MahApps.Metro"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:School_Administration_System_v2.PL"
+        mc:Ignorable="d"
+        Title="Admit_Student" Height="700" Width="1167" MaxHeight="700" MaxWidth="1167" MinHeight="700" MinWidth="1167">
+    <Grid>
+        <Label x:Name="label" Content="Admit Student" HorizontalAlignment="Left" Margin="28,10,0,0" VerticalAlignment="Top" Height="99" Width="677" FontSize="64" FontWeight="Bold"/>
+        <Label x:Name="label1" Content="ID :&#xA;" HorizontalAlignment="Left" Margin="96,116,0,0" VerticalAlignment="Top" FontSize="20" FontFamily="Arial" FontWeight="Bold"/>
+        <TextBox x:Name="id" HorizontalAlignment="Left" Height="45" Margin="156,110,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="262" ToolTip="Enter Admission ID of a Student." Controls:ControlsHelper.FocusBorderBrush="#FFE44444" Controls:TextBoxHelper.IsWaitingForData="True" FontSize="20" FontWeight="Bold" />
+        <Button x:Name="search_button" Content="SEARCH" HorizontalAlignment="Left" Margin="452,114,0,0" VerticalAlignment="Top" Width="75" Height="39" FontSize="13.333" IsDefault="True" Click="search_Button_Click"/>
+        <Rectangle Fill="#FFD98EE0" HorizontalAlignment="Left" Height="356" Margin="108,179,0,0" Stroke="Black" VerticalAlignment="Top" Width="931"/>
+        <TextBox x:Name="interestedGrade" HorizontalAlignment="Left" Height="40" Margin="278,382,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="273" Text="&#xA;" FontSize="20" FontStyle="Italic" FontFamily="Arial" BorderThickness="3" IsEnabled="False"/>
+        <Label x:Name="label1_Copy" Content="Grade&#xA;" HorizontalAlignment="Left" Margin="128,384,0,0" VerticalAlignment="Top" FontSize="20" FontFamily="Arial" FontWeight="Bold" Height="58" Width="107"/>
+        <TextBox x:Name="group" HorizontalAlignment="Left" Height="40" Margin="278,441,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="273" FontSize="20" FontStyle="Italic" FontFamily="Arial" BorderThickness="3" IsEnabled="False"/>
+        <Label x:Name="label1_Copy1" Content="Group&#xA;" HorizontalAlignment="Left" Margin="128,445,0,0" VerticalAlignment="Top" FontSize="20" FontFamily="Arial" FontWeight="Bold" Height="58" Width="136"/>
+        <TextBox x:Name="fullName" HorizontalAlignment="Left" Height="40" Margin="278,204,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="273" FontSize="20" FontStyle="Italic" FontFamily="Arial" BorderThickness="3" IsEnabled="False"/>
+        <Label x:Name="label1_Copy2" Content="Full Name&#xA;" HorizontalAlignment="Left" Margin="128,208,0,0" VerticalAlignment="Top" FontSize="20" FontFamily="Arial" FontWeight="Bold" Height="57" Width="110"/>
+        <TextBox x:Name="addmissionSession" HorizontalAlignment="Left" Height="41" Margin="278,261,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="273" Text="&#xA;" FontSize="20" FontStyle="Italic" FontFamily="Arial" BorderThickness="3" IsEnabled="False"/>
+        <Label x:Name="label1_Copy3" Content="Ad. Session" HorizontalAlignment="Left" Margin="128,265,0,0" VerticalAlignment="Top" FontSize="20" FontFamily="Arial" FontWeight="Bold" Height="35" Width="129"/>
+        <TextBox x:Name="gender" HorizontalAlignment="Left" Height="40" Margin="278,320,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="273" Text="&#xA;" FontSize="20" FontStyle="Italic" FontFamily="Arial" BorderThickness="3" IsEnabled="False"/>
+        <Label x:Name="label1_Copy4" Content="Gender&#xA;" HorizontalAlignment="Left" Margin="128,320,0,0" VerticalAlignment="Top" FontSize="20" FontFamily="Arial" FontWeight="Bold" Height="58" Width="85"/>
+        <Button x:Name="Back_Button" Content="BACK" HorizontalAlignment="Left" Margin="368,571,0,0" VerticalAlignment="Top" Width="391" Height="68" FontSize="26" Click="Cancel_Button_Click"  />
+        <TextBox x:Name="vivaMark" HorizontalAlignment="Left" Height="40" Margin="735,378,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="273" Text="&#xA;" FontSize="20" FontStyle="Italic" FontFamily="Arial" BorderThickness="3" IsEnabled="False"/>
+        <Label x:Name="label1_Copy5" Content="Viva Mark&#xA;" HorizontalAlignment="Left" Margin="584,380,0,0" VerticalAlignment="Top" FontSize="20" FontFamily="Arial" FontWeight="Bold" Height="58" Width="108"/>
+        <TextBox x:Name="Total" HorizontalAlignment="Left" Height="40" Margin="735,437,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="273" FontSize="20" FontStyle="Italic" FontFamily="Arial" BorderThickness="3" IsEnabled="False"/>
+        <Label x:Name="label1_Copy6" Content="Total&#xA;" HorizontalAlignment="Left" Margin="584,441,0,0" VerticalAlignment="Top" FontSize="20" FontFamily="Arial" FontWeight="Bold" Height="58" Width="59"/>
+        <Label x:Name="label1_Copy7" Content="Teacher ID&#xA;" HorizontalAlignment="Left" Margin="584,204,0,0" VerticalAlignment="Top" FontSize="20" FontFamily="Arial" FontWeight="Bold" Height="57" Width="116"/>
+        <Label x:Name="label1_Copy8" Content="Eligible Mark" HorizontalAlignment="Left" Margin="584,261,0,0" VerticalAlignment="Top" FontSize="20" FontFamily="Arial" FontWeight="Bold" Height="34" Width="139"/>
+        <TextBox x:Name="written_mark" HorizontalAlignment="Left" Height="40" Margin="735,316,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="273" Text="&#xA;" FontSize="20" FontStyle="Italic" FontFamily="Arial" BorderThickness="3" IsEnabled="False"/>
+        <Label x:Name="label1_Copy9" Content="Written Mark" HorizontalAlignment="Left" Margin="584,316,0,0" VerticalAlignment="Top" FontSize="20" FontFamily="Arial" FontWeight="Bold" Height="34" Width="137"/>
+        <Label x:Name="eligibleMarks" Content="Written :             Viva:" HorizontalAlignment="Left" Margin="735,261,0,0" VerticalAlignment="Top" FontSize="20" FontFamily="Arial" FontWeight="Bold" Height="34" Width="279"/>
+        <Label x:Name="teacherIDs" Content="Written :             Viva:" HorizontalAlignment="Left" Margin="735,208,0,0" VerticalAlignment="Top" FontSize="20" FontFamily="Arial" FontWeight="Bold" Height="34" Width="273"/>
+        <Label x:Name="label1_Copy10" Content="Eligibility:" HorizontalAlignment="Left" Margin="584,490,0,0" VerticalAlignment="Top" FontSize="20" FontFamily="Arial" FontWeight="Bold" Height="58" Width="108"/>
+        <Label x:Name="Eligibility" Content="" HorizontalAlignment="Left" Margin="735,490,0,0" VerticalAlignment="Top" FontSize="20" FontFamily="Arial" FontWeight="Bold" Height="58" Width="108" Background="{x:Null}" Foreground="#FF4904FF"/>
+        <Button x:Name="Add_Student" Content="ADD STUDENT" HorizontalAlignment="Left" Margin="850,488,0,0" VerticalAlignment="Top" Width="123" Height="37" Click="Add_Student_Click"/>
+
+    </Grid>
+</Controls:MetroWindow>

@@ -1,0 +1,70 @@
+﻿<Controls:MetroWindow
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+        xmlns:Dialogs="clr-namespace:MahApps.Metro.Controls.Dialogs;assembly=MahApps.Metro"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d" x:Class="School_Administration_System_v2.PL.New_Student"
+        WindowStartupLocation="Manual" 
+        Left="0" Top="0"
+        Title="School Administration System" Height="700" Width="1167" MaxHeight="700" MaxWidth="1167" MinHeight="700" MinWidth="1167">
+    <Grid>
+        <Button Content="DONE" HorizontalAlignment="Left" Margin="613,587,0,0" VerticalAlignment="Top" Width="391" Height="68" FontSize="26" Click="Button_DONE"/>
+        <TextBlock HorizontalAlignment="Left" Margin="50,181,0,0" TextWrapping="Wrap" Text="First Name" VerticalAlignment="Top" FontSize="20"/>
+        <TextBlock HorizontalAlignment="Left" Margin="50,226,0,0" TextWrapping="Wrap" Text="Last Name" VerticalAlignment="Top" FontSize="20"/>
+        <TextBlock HorizontalAlignment="Left" Margin="50,305,0,0" TextWrapping="Wrap" Text="Father's Name" VerticalAlignment="Top" FontSize="20"/>
+        <TextBlock HorizontalAlignment="Left" Margin="50,350,0,0" TextWrapping="Wrap" Text="Mother's Name" VerticalAlignment="Top" FontSize="20"/>
+        <TextBlock HorizontalAlignment="Left" Margin="50,395,0,0" TextWrapping="Wrap" Text="Gender" VerticalAlignment="Top" FontSize="20"/>
+        <TextBlock HorizontalAlignment="Left" Margin="50,440,0,0" TextWrapping="Wrap" Text="Blood Group" VerticalAlignment="Top" FontSize="20"/>
+        <TextBlock HorizontalAlignment="Left" Margin="50,485,0,0" TextWrapping="Wrap" Text="Date Of Birth" VerticalAlignment="Top" FontSize="20"/>
+        <TextBlock HorizontalAlignment="Left" Margin="587,221,0,0" TextWrapping="Wrap" Text="Guardian" VerticalAlignment="Top" FontSize="20"/>
+        <TextBlock HorizontalAlignment="Left" Margin="586,306,0,0" TextWrapping="Wrap" Text="Guardian's Number" VerticalAlignment="Top" FontSize="20"/>
+        <TextBlock HorizontalAlignment="Left" Margin="586,351,0,0" TextWrapping="Wrap" Text="Current School" VerticalAlignment="Top" FontSize="20"/>
+        <TextBlock HorizontalAlignment="Left" Margin="586,396,0,0" TextWrapping="Wrap" Text="Current Grade" VerticalAlignment="Top" FontSize="20"/>
+        <TextBlock HorizontalAlignment="Left" Margin="586,441,0,0" TextWrapping="Wrap" Text="Registered Grade?" VerticalAlignment="Top" FontSize="20"/>
+        <TextBlock HorizontalAlignment="Left" Margin="586,486,0,0" TextWrapping="Wrap" Text="Address" VerticalAlignment="Top" FontSize="20"/>
+        <TextBlock HorizontalAlignment="Left" Margin="54,143,0,0" TextWrapping="Wrap" Text="ID" VerticalAlignment="Top" FontSize="20"/>
+        <TextBox x:Name="id" HorizontalAlignment="Left" Height="26" Margin="218,146,0,0" TextWrapping="Wrap" Text="AUTO-GENERATED" VerticalAlignment="Top" Width="304" IsEnabled="False" TextChanged="TextBox_TextChanged"/>
+        <TextBox x:Name="fistName" HorizontalAlignment="Left" Height="26" Margin="218,182,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="304" TextChanged="TextBox_TextChanged_1"/>
+        <TextBox x:Name="lastName" HorizontalAlignment="Left" Height="26" Margin="218,228,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="304" TextChanged="TextBox_TextChanged_2"/>
+        <TextBox x:Name="fullName" HorizontalAlignment="Left" Height="26" Margin="218,267,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="304" TextChanged="TextBox_TextChanged_3"/>
+        <TextBox x:Name="fathersName" HorizontalAlignment="Left" Height="26" Margin="218,306,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="304" TextChanged="TextBox_TextChanged_4"/>
+        <TextBox x:Name="mothersName" HorizontalAlignment="Left" Height="26" Margin="218,351,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="304" TextChanged="TextBox_TextChanged_5"/>
+        <TextBox x:Name="gender" HorizontalAlignment="Left" Height="26" Margin="218,397,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="304" TextChanged="TextBox_TextChanged_6"/>
+        <TextBox x:Name="bloodGroup" HorizontalAlignment="Left" Height="26" Margin="218,441,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="304" TextChanged="TextBox_TextChanged_7"/>
+        <DatePicker x:Name="dobDatePicker" HorizontalAlignment="Left" Margin="218,487,0,0" VerticalAlignment="Top" Width="304" />
+        <Controls:DropDownButton x:Name="religionList" HorizontalAlignment="Left" Margin="218,531,0,0" VerticalAlignment="Top" Height="27" Width="304"
+            />
+        <TextBox x:Name="admissionSession" HorizontalAlignment="Left" Height="26" Margin="786,137,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="304" TextChanged="TextBox_TextChanged_8"/>
+        <TextBox x:Name="group" HorizontalAlignment="Left" Height="26" Margin="786,184,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="304" IsEnabled="True" TextChanged="TextBox_TextChanged_9"/>
+        <RadioButton GroupName='Guardian' IsChecked="TRUE" Content="Father" HorizontalAlignment="Left" Margin="820,227,0,0" VerticalAlignment="Top" FontSize="13.333"/>
+        <RadioButton GroupName='Guardian' Content="Mother" HorizontalAlignment="Left" Margin="910,227,0,0" VerticalAlignment="Top" FontSize="13.333"/>
+        <RadioButton GroupName='Guardian' Content="Other" HorizontalAlignment="Left" Margin="1000,227,0,0" VerticalAlignment="Top" FontSize="13.333"/>
+        <TextBox x:Name="guardianName" HorizontalAlignment="Left" Height="26" Margin="786,262,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="304" IsEnabled="False"/>
+        <TextBox x:Name="guardianNumber" HorizontalAlignment="Left" Height="26" Margin="786,308,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="304"/>
+        <TextBox x:Name="currentSchool" HorizontalAlignment="Left" Height="26" Margin="786,352,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="304" TextChanged="TextBox_TextChanged_10"/>
+        <TextBox x:Name="currentGrade" HorizontalAlignment="Left" Height="26" Margin="786,397,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="304" TextChanged="TextBox_TextChanged_11"/>
+        <TextBox x:Name="registeredGrade" HorizontalAlignment="Left" Height="26" Margin="786,443,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="304" TextChanged="TextBox_TextChanged_12"/>
+        <TextBox x:Name="address" HorizontalAlignment="Left" Height="26" Margin="786,487,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="304" TextChanged="TextBox_TextChanged_13"/>
+        <TextBox x:Name="country" HorizontalAlignment="Left" Height="26" Margin="786,532,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="304" TextChanged="TextBox_TextChanged_14"/>
+
+
+        <TextBlock HorizontalAlignment="Left" Margin="587,528,0,0" TextWrapping="Wrap" Text="Country" VerticalAlignment="Top" FontSize="20"/>
+
+        <Button Content="Back" HorizontalAlignment="Left" Margin="158,587,0,0" VerticalAlignment="Top" Width="391" Height="68" FontSize="26" Click="Button_Back"/>
+        <TextBlock HorizontalAlignment="Left" Margin="50,531,0,0" TextWrapping="Wrap" Text="Religion" VerticalAlignment="Top" FontSize="20"/>
+        <TextBlock HorizontalAlignment="Left" Margin="586,183,0,0" TextWrapping="Wrap" Text="Group" VerticalAlignment="Top" FontSize="20"/>
+
+        <TextBlock HorizontalAlignment="Left" Margin="586,261,0,0" TextWrapping="Wrap" Text="Guardian Name" VerticalAlignment="Top" FontSize="20"/>
+
+
+
+        <TextBlock HorizontalAlignment="Left" Margin="50,266,0,0" TextWrapping="Wrap" Text="Full Name" VerticalAlignment="Top" FontSize="20"/>
+
+        <Label x:Name="label" Content="REGISTER STUDENT" HorizontalAlignment="Left" Margin="28,10,0,0" VerticalAlignment="Top" Height="99" Width="696" FontSize="64" FontWeight="Bold"/>
+
+        <TextBlock HorizontalAlignment="Left" Margin="586,136,0,0" TextWrapping="Wrap" Text="Admission Session " VerticalAlignment="Top" FontSize="20"/>
+        
+
+
+    </Grid>
+</Controls:MetroWindow>

@@ -1,0 +1,31 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:School_Administration_System_v2.PL"
+        xmlns:Custom="http://metro.mahapps.com/winfx/xaml/controls" x:Class="School_Administration_System_v2.PL.Pay_Tution"
+        mc:Ignorable="d"
+        Title="Pay_Tution" Height="700" Width="1167" MaxHeight="700" MaxWidth="1167" MinHeight="700" MinWidth="1167">
+    <Grid>
+        <Label x:Name="label" Content="Pay Tution" HorizontalAlignment="Left" Margin="28,10,0,0" VerticalAlignment="Top" Height="99" Width="677" FontSize="64" FontWeight="Bold"/>
+
+        <Label x:Name="label1" VerticalAlignment="Top" Margin="166,118,0,0" HorizontalAlignment="Left" FontFamily="Arial" FontSize="20" FontWeight="Bold" Content="ID :&#xA;"/>
+        <TextBox x:Name="id" HorizontalAlignment="Left" Height="45" Margin="226,112,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="262" ToolTip="Enter Admission ID of a Student." Custom:ControlsHelper.FocusBorderBrush="#FFE44444" Custom:TextBoxHelper.IsWaitingForData="True" FontSize="20" FontWeight="Bold" />
+        <Button x:Name="search" Content="SEARCH" HorizontalAlignment="Left" Margin="522,116,0,0" VerticalAlignment="Top" Width="75" Height="39" FontSize="13.333" IsDefault="True" Click="button_Click_2"/>
+        <Rectangle Fill="#FFFCFCFF" HorizontalAlignment="Left" Height="322" Margin="170,191,0,0" Stroke="Black" VerticalAlignment="Top" Width="893"/>
+        <TextBox x:Name="month" HorizontalAlignment="Left" Height="39" Margin="359,374,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="308" Text="&#xA;" FontSize="20" FontStyle="Italic" FontFamily="Arial" BorderThickness="3" TextChanged="month_TextChanged"/>
+        <Label x:Name="label1_Copy" Content="Month&#xA;" HorizontalAlignment="Left" Margin="189,376,0,0" VerticalAlignment="Top" FontSize="20" FontFamily="Arial" FontWeight="Bold"/>
+        <TextBox x:Name="taka" HorizontalAlignment="Left" Height="39" Margin="359,435,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="308" FontSize="20" FontStyle="Italic" FontFamily="Arial" BorderThickness="3" Text="500" IsEnabled="False" TextChanged="taka_TextChanged"/>
+        <Label x:Name="label1_Copy1" Content="Taka&#xA;" HorizontalAlignment="Left" Margin="189,439,0,0" VerticalAlignment="Top" FontSize="20" FontFamily="Arial" FontWeight="Bold"/>
+        <TextBox x:Name="fullName" HorizontalAlignment="Left" Height="39" Margin="359,211,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="308" FontSize="20" FontStyle="Italic" FontFamily="Arial" BorderThickness="3" IsEnabled="False" TextChanged="fullName_TextChanged"/>
+        <Label x:Name="label1_Copy2" Content="Full Name&#xA;" HorizontalAlignment="Left" Margin="189,215,0,0" VerticalAlignment="Top" FontSize="20" FontFamily="Arial" FontWeight="Bold"/>
+        <TextBox x:Name="grade" HorizontalAlignment="Left" Height="39" Margin="359,263,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="308" Text="&#xA;" FontSize="20" FontStyle="Italic" FontFamily="Arial" BorderThickness="3" IsEnabled="False" TextChanged="grade_TextChanged"/>
+        <Label x:Name="label1_Copy3" Content="Grade" HorizontalAlignment="Left" Margin="189,267,0,0" VerticalAlignment="Top" FontSize="20" FontFamily="Arial" FontWeight="Bold"/>
+        <TextBox x:Name="group" HorizontalAlignment="Left" Height="39" Margin="359,316,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="308" Text="&#xA;" FontSize="20" FontStyle="Italic" FontFamily="Arial" BorderThickness="3" IsEnabled="False" TextChanged="group_TextChanged"/>
+        <Label x:Name="label1_Copy4" Content="Group&#xA;" HorizontalAlignment="Left" Margin="189,316,0,0" VerticalAlignment="Top" FontSize="20" FontFamily="Arial" FontWeight="Bold"/>
+        <Button x:Name="Done" Content="DONE" HorizontalAlignment="Left" Margin="723,549,0,0" VerticalAlignment="Top" Width="391" Height="68" FontSize="26" Click="Button_Click_1" />
+        <Button Content="Cancel" HorizontalAlignment="Left" Margin="268,549,0,0" VerticalAlignment="Top" Width="391" Height="68" FontSize="26" Click="Button_Click" IsCancel="True" />
+
+    </Grid>
+</Window>
