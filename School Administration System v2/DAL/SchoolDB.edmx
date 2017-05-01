@@ -1,0 +1,1480 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="StudentDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Accounts">
+          <Key>
+            <PropertyRef Name="Transaction_ID" />
+          </Key>
+          <Property Name="Transaction_ID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Admin">
+          <Key>
+            <PropertyRef Name="Admin_ID" />
+          </Key>
+          <Property Name="Admin_ID" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Admin_Role" Type="varchar" MaxLength="50" />
+          <Property Name="First_Name" Type="varchar" MaxLength="50" />
+          <Property Name="Last_Name" Type="varchar" MaxLength="50" />
+          <Property Name="Full_Name" Type="varchar" MaxLength="50" />
+          <Property Name="Gender" Type="varchar" MaxLength="50" />
+          <Property Name="Fathers_Name" Type="varchar" MaxLength="50" />
+          <Property Name="Mothers_Name" Type="varchar" MaxLength="50" />
+          <Property Name="Address" Type="varchar" MaxLength="50" />
+          <Property Name="Mobile" Type="varchar" MaxLength="50" />
+          <Property Name="Email" Type="varchar" MaxLength="50" />
+          <Property Name="DOB" Type="date" />
+          <Property Name="Blood_Group" Type="varchar" MaxLength="50" />
+          <Property Name="Country" Type="varchar" MaxLength="50" />
+          <Property Name="Religoin" Type="varchar" MaxLength="50" />
+          <Property Name="Recruited_Session" Type="varchar" MaxLength="50" />
+          <Property Name="Designation" Type="varchar" MaxLength="50" />
+          <Property Name="Status" Type="varchar" MaxLength="50" />
+          <Property Name="Marital_Status" Type="varchar" MaxLength="50" />
+          <Property Name="Status_Time_From" Type="date" />
+          <Property Name="Status_Time_To" Type="date" />
+          <Property Name="Last_Login_Date" Type="date" />
+          <Property Name="Pasword" Type="varchar" MaxLength="50" />
+          <Property Name="Joined_Date" Type="date" />
+          <Property Name="Resigned_Date" Type="date" />
+        </EntityType>
+        <EntityType Name="Admission_Exam_Result">
+          <Key>
+            <PropertyRef Name="Admission_Exam_ID" />
+          </Key>
+          <Property Name="Admission_Exam_ID" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Admission_Student_ID" Type="varchar" MaxLength="50" />
+          <Property Name="Writtern_Exam_Mark" Type="varchar" MaxLength="50" />
+          <Property Name="Viva_Exam_Mark" Type="varchar" MaxLength="50" />
+          <Property Name="Written_Examiner_ID" Type="varchar" MaxLength="50" />
+          <Property Name="Viva_Examiner_ID" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Admission_Student">
+          <Key>
+            <PropertyRef Name="Admission_Student_ID" />
+          </Key>
+          <Property Name="Admission_Student_ID" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="First_Name" Type="varchar" MaxLength="50" />
+          <Property Name="Last_Name" Type="varchar" MaxLength="50" />
+          <Property Name="Full_Name" Type="varchar" MaxLength="50" />
+          <Property Name="Gender" Type="varchar" MaxLength="50" />
+          <Property Name="Fathers_Name" Type="varchar" MaxLength="50" />
+          <Property Name="Mothers_Name" Type="varchar" MaxLength="50" />
+          <Property Name="Address" Type="varchar" MaxLength="50" />
+          <Property Name="Mobile" Type="varchar" MaxLength="50" />
+          <Property Name="Email" Type="varchar" MaxLength="50" />
+          <Property Name="DOB" Type="date" />
+          <Property Name="Blood_Group" Type="varchar" MaxLength="50" />
+          <Property Name="Country" Type="varchar" MaxLength="50" />
+          <Property Name="Religion" Type="varchar" MaxLength="50" />
+          <Property Name="Admission_Session" Type="varchar" MaxLength="50" />
+          <Property Name="Current_School" Type="varchar" MaxLength="50" />
+          <Property Name="Current_Grade" Type="varchar" MaxLength="50" />
+          <Property Name="Interested_Grade" Type="varchar" MaxLength="50" />
+          <Property Name="Group" Type="varchar" MaxLength="50" />
+          <Property Name="Registered_Date" Type="date" />
+        </EntityType>
+        <EntityType Name="Admissoin_Time_Fees_Yearly">
+          <Key>
+            <PropertyRef Name="Admission_Fees_ID" />
+          </Key>
+          <Property Name="Admission_Fees_ID" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Admission_Student_ID" Type="varchar" MaxLength="50" />
+          <Property Name="Admisson_Fee" Type="smallmoney" />
+          <Property Name="Development_Fee" Type="smallmoney" />
+          <Property Name="Maintainance_Fee" Type="smallmoney" />
+          <Property Name="Library_Fee" Type="smallmoney" />
+          <Property Name="Medical_Fee" Type="smallmoney" />
+          <Property Name="IDCard_Fee" Type="smallmoney" />
+          <Property Name="Late_Fine" Type="smallmoney" />
+          <Property Name="Receipt_Print_Time" Type="datetime" />
+          <Property Name="Transaction_Time" Type="datetime" />
+          <Property Name="Remarks" Type="varchar" MaxLength="250" />
+        </EntityType>
+        <EntityType Name="Attendance">
+          <Key>
+            <PropertyRef Name="Attendance_Date" />
+          </Key>
+          <Property Name="Attendance_Date" Type="datetime" Nullable="false" />
+          <Property Name="Status" Type="bit" />
+        </EntityType>
+        <EntityType Name="Classroom">
+          <Key>
+            <PropertyRef Name="Classroom_ID" />
+          </Key>
+          <Property Name="Classroom_ID" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Status" Type="bit" />
+          <Property Name="Remarks" Type="varchar" MaxLength="250" />
+        </EntityType>
+        <EntityType Name="Grade">
+          <Key>
+            <PropertyRef Name="Grade_ID" />
+          </Key>
+          <Property Name="Grade_ID" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Classroom_ID" Type="varchar" MaxLength="50" />
+          <Property Name="Group" Type="varchar" MaxLength="50" />
+          <Property Name="Description" Type="varchar" MaxLength="350" />
+        </EntityType>
+        <EntityType Name="Image">
+          <Key>
+            <PropertyRef Name="Image_ID" />
+          </Key>
+          <Property Name="Image_ID" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Admission_Student_ID" Type="varchar" MaxLength="50" />
+          <Property Name="Teacher_ID" Type="varchar" MaxLength="50" />
+          <Property Name="Image_Path" Type="varchar" MaxLength="150" />
+          <Property Name="Saved_Date" Type="date" />
+        </EntityType>
+        <EntityType Name="Inventory">
+          <Key>
+            <PropertyRef Name="Inventory_ID" />
+          </Key>
+          <Property Name="Inventory_ID" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Printer" Type="varchar" MaxLength="50" />
+          <Property Name="Computer" Type="varchar" MaxLength="50" />
+          <Property Name="Mouse" Type="varchar" MaxLength="50" />
+          <Property Name="Keyboard" Type="varchar" MaxLength="50" />
+          <Property Name="Projector" Type="varchar" MaxLength="50" />
+          <Property Name="Camera" Type="varchar" MaxLength="50" />
+          <Property Name="Whiteboard" Type="varchar" MaxLength="50" />
+          <Property Name="Marker" Type="varchar" MaxLength="50" />
+          <Property Name="Pencil" Type="varchar" MaxLength="50" />
+          <Property Name="Clock" Type="varchar" MaxLength="50" />
+          <Property Name="Paperbundle" Type="varchar" MaxLength="50" />
+          <Property Name="Pen" Type="varchar" MaxLength="50" />
+          <Property Name="Duster" Type="varchar" MaxLength="50" />
+          <Property Name="Geometrybox" Type="varchar" MaxLength="50" />
+          <Property Name="Ruler" Type="varchar" MaxLength="50" />
+          <Property Name="Chair" Type="varchar" MaxLength="50" />
+          <Property Name="Bench" Type="varchar" MaxLength="50" />
+          <Property Name="Table" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Regular_Fees">
+          <Key>
+            <PropertyRef Name="Regular_Fees_ID" />
+          </Key>
+          <Property Name="Regular_Fees_ID" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Monthly_Fee" Type="smallmoney" />
+          <Property Name="Exam_Fee" Type="smallmoney" />
+          <Property Name="Late_Fine" Type="smallmoney" />
+        </EntityType>
+        <EntityType Name="Result">
+          <Key>
+            <PropertyRef Name="Result_ID" />
+          </Key>
+          <Property Name="Result_ID" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Subject_ID" Type="varchar" MaxLength="50" />
+          <Property Name="Mid" Type="varchar" MaxLength="50" />
+          <Property Name="Final" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'StudentDB.dbo.Staff' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="Staff">
+          <Key>
+            <PropertyRef Name="Staff_ID" />
+          </Key>
+          <Property Name="Staff_ID" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Task_ID" Type="varchar" MaxLength="50" />
+          <Property Name="Attendance_Date" Type="datetime" />
+          <Property Name="First_Name" Type="varchar" MaxLength="50" />
+          <Property Name="Last_Name" Type="varchar" MaxLength="50" />
+          <Property Name="Full_Name" Type="varchar" MaxLength="50" />
+          <Property Name="Gender" Type="varchar" MaxLength="50" />
+          <Property Name="Fathers_Name" Type="varchar" MaxLength="50" />
+          <Property Name="Mothers_Name" Type="varchar" MaxLength="50" />
+          <Property Name="Address" Type="varchar" MaxLength="50" />
+          <Property Name="Mobile" Type="varchar" MaxLength="50" />
+          <Property Name="Email" Type="varchar" MaxLength="50" />
+          <Property Name="DOB" Type="date" />
+          <Property Name="Blood_Group" Type="varchar" MaxLength="50" />
+          <Property Name="Country" Type="varchar" MaxLength="50" />
+          <Property Name="Religoin" Type="varchar" MaxLength="50" />
+          <Property Name="Recruited_Session" Type="varchar" MaxLength="50" />
+          <Property Name="Designation" Type="varchar" MaxLength="50" />
+          <Property Name="Status" Type="varchar" MaxLength="50" />
+          <Property Name="Status_Time_From" Type="date" />
+          <Property Name="Status_Time_To" Type="date" />
+          <Property Name="Joined_Date" Type="date" />
+          <Property Name="Resigned_Date" Type="date" />
+        </EntityType>
+        <EntityType Name="Student">
+          <Key>
+            <PropertyRef Name="Student_ID" />
+          </Key>
+          <Property Name="Student_ID" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Admissin_Student_ID" Type="varchar" MaxLength="50" />
+          <Property Name="Student_Status" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6013: The table/view 'StudentDB.dbo.Student_Regular_Fees' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="Student_Regular_Fees">
+          <Property Name="Student_ID" Type="varchar" MaxLength="50" />
+          <Property Name="Regular_Fees_ID" Type="varchar" MaxLength="50" />
+        </EntityType>-->
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'StudentDB.dbo.Student_Subject' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="Student_Subject">
+          <Key>
+            <PropertyRef Name="Student_ID" />
+            <PropertyRef Name="Subject_ID" />
+          </Key>
+          <Property Name="Student_ID" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Subject_ID" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Subject">
+          <Key>
+            <PropertyRef Name="Subject_ID" />
+          </Key>
+          <Property Name="Subject_ID" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Subject_Name" Type="varchar" MaxLength="50" />
+          <Property Name="Grade_ID" Type="varchar" MaxLength="50" />
+          <Property Name="Description" Type="varchar" MaxLength="250" />
+        </EntityType>
+        <EntityType Name="Task">
+          <Key>
+            <PropertyRef Name="Task_ID" />
+          </Key>
+          <Property Name="Task_ID" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="TaskType" Type="varchar" MaxLength="50" />
+          <Property Name="Task_Description" Type="varchar" MaxLength="500" />
+          <Property Name="Assigned_Date" Type="date" />
+          <Property Name="Deadline" Type="date" />
+          <Property Name="Completion_Date" Type="date" />
+        </EntityType>
+        <EntityType Name="Teacher">
+          <Key>
+            <PropertyRef Name="Teacher_ID" />
+          </Key>
+          <Property Name="Teacher_ID" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="First_Name" Type="varchar" MaxLength="50" />
+          <Property Name="Last_Name" Type="varchar" MaxLength="50" />
+          <Property Name="Full_Name" Type="varchar" MaxLength="50" />
+          <Property Name="Gender" Type="varchar" MaxLength="50" />
+          <Property Name="Fathers_Name" Type="varchar" MaxLength="50" />
+          <Property Name="Mothers_Name" Type="varchar" MaxLength="50" />
+          <Property Name="Address" Type="varchar" MaxLength="50" />
+          <Property Name="Mobile" Type="varchar" MaxLength="50" />
+          <Property Name="Email" Type="varchar" MaxLength="50" />
+          <Property Name="DOB" Type="date" />
+          <Property Name="Marital_Status" Type="varchar" MaxLength="50" />
+          <Property Name="Blood_Group" Type="varchar" MaxLength="50" />
+          <Property Name="Country" Type="varchar" MaxLength="50" />
+          <Property Name="Religoin" Type="varchar" MaxLength="50" />
+          <Property Name="Recruited_Session" Type="varchar" MaxLength="50" />
+          <Property Name="Group" Type="varchar" MaxLength="50" />
+          <Property Name="Designation" Type="varchar" MaxLength="50" />
+          <Property Name="Status" Type="varchar" MaxLength="50" />
+          <Property Name="Status_Time_From" Type="date" />
+          <Property Name="Status_Time_To" Type="date" />
+          <Property Name="Last_Login_Date" Type="date" />
+          <Property Name="Pasword" Type="varchar" MaxLength="50" />
+          <Property Name="Joined_Date" Type="date" />
+          <Property Name="Resigned_Date" Type="date" />
+        </EntityType>
+        <EntityType Name="Teacher_Task">
+          <Key>
+            <PropertyRef Name="Task_ID" />
+          </Key>
+          <Property Name="Task_ID" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Teacher_ID" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Tracker">
+          <Key>
+            <PropertyRef Name="Traking_Name" />
+          </Key>
+          <Property Name="Traking_Name" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Tracking_Number" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <Association Name="FK__Admission__Admis__4CA06362">
+          <End Role="Admission_Student" Type="Self.Admission_Student" Multiplicity="0..1" />
+          <End Role="Admission_Exam_Result" Type="Self.Admission_Exam_Result" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Admission_Student">
+              <PropertyRef Name="Admission_Student_ID" />
+            </Principal>
+            <Dependent Role="Admission_Exam_Result">
+              <PropertyRef Name="Admission_Student_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Admission__Viva___02FC7413">
+          <End Role="Teacher" Type="Self.Teacher" Multiplicity="0..1" />
+          <End Role="Admission_Exam_Result" Type="Self.Admission_Exam_Result" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Teacher">
+              <PropertyRef Name="Teacher_ID" />
+            </Principal>
+            <Dependent Role="Admission_Exam_Result">
+              <PropertyRef Name="Viva_Examiner_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Admission__Writt__03F0984C">
+          <End Role="Teacher" Type="Self.Teacher" Multiplicity="0..1" />
+          <End Role="Admission_Exam_Result" Type="Self.Admission_Exam_Result" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Teacher">
+              <PropertyRef Name="Teacher_ID" />
+            </Principal>
+            <Dependent Role="Admission_Exam_Result">
+              <PropertyRef Name="Written_Examiner_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Admissoin__Admis__4D94879B">
+          <End Role="Admission_Student" Type="Self.Admission_Student" Multiplicity="0..1" />
+          <End Role="Admissoin_Time_Fees_Yearly" Type="Self.Admissoin_Time_Fees_Yearly" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Admission_Student">
+              <PropertyRef Name="Admission_Student_ID" />
+            </Principal>
+            <Dependent Role="Admissoin_Time_Fees_Yearly">
+              <PropertyRef Name="Admission_Student_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Grade__Classroom__2F10007B">
+          <End Role="Classroom" Type="Self.Classroom" Multiplicity="0..1" />
+          <End Role="Grade" Type="Self.Grade" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Classroom">
+              <PropertyRef Name="Classroom_ID" />
+            </Principal>
+            <Dependent Role="Grade">
+              <PropertyRef Name="Classroom_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Image__Admission__5DCAEF64">
+          <End Role="Admission_Student" Type="Self.Admission_Student" Multiplicity="0..1" />
+          <End Role="Image" Type="Self.Image" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Admission_Student">
+              <PropertyRef Name="Admission_Student_ID" />
+            </Principal>
+            <Dependent Role="Image">
+              <PropertyRef Name="Admission_Student_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Image__Teacher_I__04E4BC85">
+          <End Role="Teacher" Type="Self.Teacher" Multiplicity="0..1" />
+          <End Role="Image" Type="Self.Image" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Teacher">
+              <PropertyRef Name="Teacher_ID" />
+            </Principal>
+            <Dependent Role="Image">
+              <PropertyRef Name="Teacher_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Result__Subject___34C8D9D1">
+          <End Role="Subject" Type="Self.Subject" Multiplicity="0..1" />
+          <End Role="Result" Type="Self.Result" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Subject">
+              <PropertyRef Name="Subject_ID" />
+            </Principal>
+            <Dependent Role="Result">
+              <PropertyRef Name="Subject_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Staff__Attendanc__3E52440B">
+          <End Role="Attendance" Type="Self.Attendance" Multiplicity="0..1" />
+          <End Role="Staff" Type="Self.Staff" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Attendance">
+              <PropertyRef Name="Attendance_Date" />
+            </Principal>
+            <Dependent Role="Staff">
+              <PropertyRef Name="Attendance_Date" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Staff__Task_ID__3F466844">
+          <End Role="Task" Type="Self.Task" Multiplicity="0..1" />
+          <End Role="Staff" Type="Self.Staff" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Task">
+              <PropertyRef Name="Task_ID" />
+            </Principal>
+            <Dependent Role="Staff">
+              <PropertyRef Name="Task_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Student__Admissi__4E88ABD4">
+          <End Role="Admission_Student" Type="Self.Admission_Student" Multiplicity="0..1" />
+          <End Role="Student" Type="Self.Student" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Admission_Student">
+              <PropertyRef Name="Admission_Student_ID" />
+            </Principal>
+            <Dependent Role="Student">
+              <PropertyRef Name="Admissin_Student_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <!--Errors Found During Generation:
+error 6004: The table 'StudentDB.dbo.Student_Regular_Fees' is referenced by a relationship, but cannot be found.
+        <Association Name="FK__Student_R__Regul__45F365D3" />-->
+        <!--Errors Found During Generation:
+error 6004: The table 'StudentDB.dbo.Student_Regular_Fees' is referenced by a relationship, but cannot be found.
+        <Association Name="FK__Student_R__Stude__44FF419A" />-->
+        <Association Name="FK__Student_S__Stude__47DBAE45">
+          <End Role="Student" Type="Self.Student" Multiplicity="1" />
+          <End Role="Student_Subject" Type="Self.Student_Subject" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Student">
+              <PropertyRef Name="Student_ID" />
+            </Principal>
+            <Dependent Role="Student_Subject">
+              <PropertyRef Name="Student_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Student_S__Subje__48CFD27E">
+          <End Role="Subject" Type="Self.Subject" Multiplicity="1" />
+          <End Role="Student_Subject" Type="Self.Student_Subject" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Subject">
+              <PropertyRef Name="Subject_ID" />
+            </Principal>
+            <Dependent Role="Student_Subject">
+              <PropertyRef Name="Subject_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Subject__Grade_I__31EC6D26">
+          <End Role="Grade" Type="Self.Grade" Multiplicity="0..1" />
+          <End Role="Subject" Type="Self.Subject" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Grade">
+              <PropertyRef Name="Grade_ID" />
+            </Principal>
+            <Dependent Role="Subject">
+              <PropertyRef Name="Grade_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Teacher_T__Task___6166761E">
+          <End Role="Task" Type="Self.Task" Multiplicity="1" />
+          <End Role="Teacher_Task" Type="Self.Teacher_Task" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="Task">
+              <PropertyRef Name="Task_ID" />
+            </Principal>
+            <Dependent Role="Teacher_Task">
+              <PropertyRef Name="Task_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Teacher_T__Teach__05D8E0BE">
+          <End Role="Teacher" Type="Self.Teacher" Multiplicity="0..1" />
+          <End Role="Teacher_Task" Type="Self.Teacher_Task" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Teacher">
+              <PropertyRef Name="Teacher_ID" />
+            </Principal>
+            <Dependent Role="Teacher_Task">
+              <PropertyRef Name="Teacher_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="StudentDBModelStoreContainer">
+          <EntitySet Name="Accounts" EntityType="Self.Accounts" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Admin" EntityType="Self.Admin" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Admission_Exam_Result" EntityType="Self.Admission_Exam_Result" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Admission_Student" EntityType="Self.Admission_Student" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Admissoin_Time_Fees_Yearly" EntityType="Self.Admissoin_Time_Fees_Yearly" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Attendance" EntityType="Self.Attendance" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Classroom" EntityType="Self.Classroom" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Grade" EntityType="Self.Grade" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Image" EntityType="Self.Image" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Inventory" EntityType="Self.Inventory" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Regular_Fees" EntityType="Self.Regular_Fees" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Result" EntityType="Self.Result" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Student" EntityType="Self.Student" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Subject" EntityType="Self.Subject" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Task" EntityType="Self.Task" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Teacher" EntityType="Self.Teacher" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Teacher_Task" EntityType="Self.Teacher_Task" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Tracker" EntityType="Self.Tracker" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Staff" EntityType="Self.Staff" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [Staff].[Staff_ID] AS [Staff_ID], 
+    [Staff].[Task_ID] AS [Task_ID], 
+    [Staff].[Attendance_Date] AS [Attendance_Date], 
+    [Staff].[First_Name] AS [First_Name], 
+    [Staff].[Last_Name] AS [Last_Name], 
+    [Staff].[Full_Name] AS [Full_Name], 
+    [Staff].[Gender] AS [Gender], 
+    [Staff].[Fathers_Name] AS [Fathers_Name], 
+    [Staff].[Mothers_Name] AS [Mothers_Name], 
+    [Staff].[Address] AS [Address], 
+    [Staff].[Mobile] AS [Mobile], 
+    [Staff].[Email] AS [Email], 
+    [Staff].[DOB] AS [DOB], 
+    [Staff].[Blood_Group] AS [Blood_Group], 
+    [Staff].[Country] AS [Country], 
+    [Staff].[Religoin] AS [Religoin], 
+    [Staff].[Recruited_Session] AS [Recruited_Session], 
+    [Staff].[Designation] AS [Designation], 
+    [Staff].[Status] AS [Status], 
+    [Staff].[Status_Time_From] AS [Status_Time_From], 
+    [Staff].[Status_Time_To] AS [Status_Time_To], 
+    [Staff].[Joined_Date] AS [Joined_Date], 
+    [Staff].[Resigned_Date] AS [Resigned_Date]
+    FROM [dbo].[Staff] AS [Staff]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="Student_Subject" EntityType="Self.Student_Subject" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [Student_Subject].[Student_ID] AS [Student_ID], 
+    [Student_Subject].[Subject_ID] AS [Subject_ID]
+    FROM [dbo].[Student_Subject] AS [Student_Subject]</DefiningQuery>
+          </EntitySet>
+          <AssociationSet Name="FK__Admission__Admis__4CA06362" Association="Self.FK__Admission__Admis__4CA06362">
+            <End Role="Admission_Student" EntitySet="Admission_Student" />
+            <End Role="Admission_Exam_Result" EntitySet="Admission_Exam_Result" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Admission__Viva___02FC7413" Association="Self.FK__Admission__Viva___02FC7413">
+            <End Role="Teacher" EntitySet="Teacher" />
+            <End Role="Admission_Exam_Result" EntitySet="Admission_Exam_Result" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Admission__Writt__03F0984C" Association="Self.FK__Admission__Writt__03F0984C">
+            <End Role="Teacher" EntitySet="Teacher" />
+            <End Role="Admission_Exam_Result" EntitySet="Admission_Exam_Result" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Admissoin__Admis__4D94879B" Association="Self.FK__Admissoin__Admis__4D94879B">
+            <End Role="Admission_Student" EntitySet="Admission_Student" />
+            <End Role="Admissoin_Time_Fees_Yearly" EntitySet="Admissoin_Time_Fees_Yearly" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Grade__Classroom__2F10007B" Association="Self.FK__Grade__Classroom__2F10007B">
+            <End Role="Classroom" EntitySet="Classroom" />
+            <End Role="Grade" EntitySet="Grade" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Image__Admission__5DCAEF64" Association="Self.FK__Image__Admission__5DCAEF64">
+            <End Role="Admission_Student" EntitySet="Admission_Student" />
+            <End Role="Image" EntitySet="Image" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Image__Teacher_I__04E4BC85" Association="Self.FK__Image__Teacher_I__04E4BC85">
+            <End Role="Teacher" EntitySet="Teacher" />
+            <End Role="Image" EntitySet="Image" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Result__Subject___34C8D9D1" Association="Self.FK__Result__Subject___34C8D9D1">
+            <End Role="Subject" EntitySet="Subject" />
+            <End Role="Result" EntitySet="Result" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Staff__Attendanc__3E52440B" Association="Self.FK__Staff__Attendanc__3E52440B">
+            <End Role="Attendance" EntitySet="Attendance" />
+            <End Role="Staff" EntitySet="Staff" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Staff__Task_ID__3F466844" Association="Self.FK__Staff__Task_ID__3F466844">
+            <End Role="Task" EntitySet="Task" />
+            <End Role="Staff" EntitySet="Staff" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Student__Admissi__4E88ABD4" Association="Self.FK__Student__Admissi__4E88ABD4">
+            <End Role="Admission_Student" EntitySet="Admission_Student" />
+            <End Role="Student" EntitySet="Student" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Student_S__Stude__47DBAE45" Association="Self.FK__Student_S__Stude__47DBAE45">
+            <End Role="Student" EntitySet="Student" />
+            <End Role="Student_Subject" EntitySet="Student_Subject" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Student_S__Subje__48CFD27E" Association="Self.FK__Student_S__Subje__48CFD27E">
+            <End Role="Subject" EntitySet="Subject" />
+            <End Role="Student_Subject" EntitySet="Student_Subject" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Subject__Grade_I__31EC6D26" Association="Self.FK__Subject__Grade_I__31EC6D26">
+            <End Role="Grade" EntitySet="Grade" />
+            <End Role="Subject" EntitySet="Subject" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Teacher_T__Task___6166761E" Association="Self.FK__Teacher_T__Task___6166761E">
+            <End Role="Task" EntitySet="Task" />
+            <End Role="Teacher_Task" EntitySet="Teacher_Task" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Teacher_T__Teach__05D8E0BE" Association="Self.FK__Teacher_T__Teach__05D8E0BE">
+            <End Role="Teacher" EntitySet="Teacher" />
+            <End Role="Teacher_Task" EntitySet="Teacher_Task" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="StudentDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Account">
+          <Key>
+            <PropertyRef Name="Transaction_ID" />
+          </Key>
+          <Property Name="Transaction_ID" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Admin">
+          <Key>
+            <PropertyRef Name="Admin_ID" />
+          </Key>
+          <Property Name="Admin_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Admin_Role" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="First_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Last_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Full_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Gender" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Fathers_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Mothers_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Address" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Mobile" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="DOB" Type="DateTime" Precision="0" />
+          <Property Name="Blood_Group" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Country" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Religoin" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Recruited_Session" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Designation" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Status" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Marital_Status" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Status_Time_From" Type="DateTime" Precision="0" />
+          <Property Name="Status_Time_To" Type="DateTime" Precision="0" />
+          <Property Name="Last_Login_Date" Type="DateTime" Precision="0" />
+          <Property Name="Pasword" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Joined_Date" Type="DateTime" Precision="0" />
+          <Property Name="Resigned_Date" Type="DateTime" Precision="0" />
+        </EntityType>
+        <EntityType Name="Admission_Exam_Result">
+          <Key>
+            <PropertyRef Name="Admission_Exam_ID" />
+          </Key>
+          <Property Name="Admission_Exam_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Admission_Student_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Writtern_Exam_Mark" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Viva_Exam_Mark" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Written_Examiner_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Viva_Examiner_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Admission_Student" Relationship="Self.FK__Admission__Admis__4CA06362" FromRole="Admission_Exam_Result" ToRole="Admission_Student" />
+          <NavigationProperty Name="Teacher" Relationship="Self.FK__Admission__Viva___02FC7413" FromRole="Admission_Exam_Result" ToRole="Teacher" />
+          <NavigationProperty Name="Teacher1" Relationship="Self.FK__Admission__Writt__03F0984C" FromRole="Admission_Exam_Result" ToRole="Teacher" />
+        </EntityType>
+        <EntityType Name="Admission_Student">
+          <Key>
+            <PropertyRef Name="Admission_Student_ID" />
+          </Key>
+          <Property Name="Admission_Student_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="First_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Last_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Full_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Gender" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Fathers_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Mothers_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Address" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Mobile" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="DOB" Type="DateTime" Precision="0" />
+          <Property Name="Blood_Group" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Country" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Religion" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Admission_Session" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Current_School" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Current_Grade" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Interested_Grade" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Group" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Registered_Date" Type="DateTime" Precision="0" />
+          <NavigationProperty Name="Admission_Exam_Result" Relationship="Self.FK__Admission__Admis__4CA06362" FromRole="Admission_Student" ToRole="Admission_Exam_Result" />
+          <NavigationProperty Name="Admissoin_Time_Fees_Yearly" Relationship="Self.FK__Admissoin__Admis__4D94879B" FromRole="Admission_Student" ToRole="Admissoin_Time_Fees_Yearly" />
+          <NavigationProperty Name="Images" Relationship="Self.FK__Image__Admission__5DCAEF64" FromRole="Admission_Student" ToRole="Image" />
+          <NavigationProperty Name="Students" Relationship="Self.FK__Student__Admissi__4E88ABD4" FromRole="Admission_Student" ToRole="Student" />
+        </EntityType>
+        <EntityType Name="Admissoin_Time_Fees_Yearly">
+          <Key>
+            <PropertyRef Name="Admission_Fees_ID" />
+          </Key>
+          <Property Name="Admission_Fees_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Admission_Student_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Admisson_Fee" Type="Decimal" Precision="10" Scale="4" />
+          <Property Name="Development_Fee" Type="Decimal" Precision="10" Scale="4" />
+          <Property Name="Maintainance_Fee" Type="Decimal" Precision="10" Scale="4" />
+          <Property Name="Library_Fee" Type="Decimal" Precision="10" Scale="4" />
+          <Property Name="Medical_Fee" Type="Decimal" Precision="10" Scale="4" />
+          <Property Name="IDCard_Fee" Type="Decimal" Precision="10" Scale="4" />
+          <Property Name="Late_Fine" Type="Decimal" Precision="10" Scale="4" />
+          <Property Name="Receipt_Print_Time" Type="DateTime" Precision="3" />
+          <Property Name="Transaction_Time" Type="DateTime" Precision="3" />
+          <Property Name="Remarks" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Admission_Student" Relationship="Self.FK__Admissoin__Admis__4D94879B" FromRole="Admissoin_Time_Fees_Yearly" ToRole="Admission_Student" />
+        </EntityType>
+        <EntityType Name="Attendance">
+          <Key>
+            <PropertyRef Name="Attendance_Date" />
+          </Key>
+          <Property Name="Attendance_Date" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Status" Type="Boolean" />
+          <NavigationProperty Name="Staffs" Relationship="Self.FK__Staff__Attendanc__3E52440B" FromRole="Attendance" ToRole="Staff" />
+        </EntityType>
+        <EntityType Name="Classroom">
+          <Key>
+            <PropertyRef Name="Classroom_ID" />
+          </Key>
+          <Property Name="Classroom_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Status" Type="Boolean" />
+          <Property Name="Remarks" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Grades" Relationship="Self.FK__Grade__Classroom__2F10007B" FromRole="Classroom" ToRole="Grade" />
+        </EntityType>
+        <EntityType Name="Grade">
+          <Key>
+            <PropertyRef Name="Grade_ID" />
+          </Key>
+          <Property Name="Grade_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Classroom_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Group" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Description" Type="String" MaxLength="350" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Classroom" Relationship="Self.FK__Grade__Classroom__2F10007B" FromRole="Grade" ToRole="Classroom" />
+          <NavigationProperty Name="Subjects" Relationship="Self.FK__Subject__Grade_I__31EC6D26" FromRole="Grade" ToRole="Subject" />
+        </EntityType>
+        <EntityType Name="Image">
+          <Key>
+            <PropertyRef Name="Image_ID" />
+          </Key>
+          <Property Name="Image_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Admission_Student_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Teacher_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Image_Path" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="Saved_Date" Type="DateTime" Precision="0" />
+          <NavigationProperty Name="Admission_Student" Relationship="Self.FK__Image__Admission__5DCAEF64" FromRole="Image" ToRole="Admission_Student" />
+          <NavigationProperty Name="Teacher" Relationship="Self.FK__Image__Teacher_I__04E4BC85" FromRole="Image" ToRole="Teacher" />
+        </EntityType>
+        <EntityType Name="Inventory">
+          <Key>
+            <PropertyRef Name="Inventory_ID" />
+          </Key>
+          <Property Name="Inventory_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Printer" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Computer" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Mouse" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Keyboard" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Projector" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Camera" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Whiteboard" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Marker" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Pencil" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Clock" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Paperbundle" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Pen" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Duster" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Geometrybox" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Ruler" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Chair" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Bench" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Table" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Regular_Fees">
+          <Key>
+            <PropertyRef Name="Regular_Fees_ID" />
+          </Key>
+          <Property Name="Regular_Fees_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Monthly_Fee" Type="Decimal" Precision="10" Scale="4" />
+          <Property Name="Exam_Fee" Type="Decimal" Precision="10" Scale="4" />
+          <Property Name="Late_Fine" Type="Decimal" Precision="10" Scale="4" />
+        </EntityType>
+        <EntityType Name="Result">
+          <Key>
+            <PropertyRef Name="Result_ID" />
+          </Key>
+          <Property Name="Result_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Subject_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Mid" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Final" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Subject" Relationship="Self.FK__Result__Subject___34C8D9D1" FromRole="Result" ToRole="Subject" />
+        </EntityType>
+        <EntityType Name="Student">
+          <Key>
+            <PropertyRef Name="Student_ID" />
+          </Key>
+          <Property Name="Student_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Admissin_Student_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Student_Status" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Admission_Student" Relationship="Self.FK__Student__Admissi__4E88ABD4" FromRole="Student" ToRole="Admission_Student" />
+          <NavigationProperty Name="Subjects" Relationship="Self.Student_Subject" FromRole="Student" ToRole="Subject" />
+        </EntityType>
+        <EntityType Name="Subject">
+          <Key>
+            <PropertyRef Name="Subject_ID" />
+          </Key>
+          <Property Name="Subject_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Subject_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Grade_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Description" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Grade" Relationship="Self.FK__Subject__Grade_I__31EC6D26" FromRole="Subject" ToRole="Grade" />
+          <NavigationProperty Name="Results" Relationship="Self.FK__Result__Subject___34C8D9D1" FromRole="Subject" ToRole="Result" />
+          <NavigationProperty Name="Students" Relationship="Self.Student_Subject" FromRole="Subject" ToRole="Student" />
+        </EntityType>
+        <EntityType Name="Task">
+          <Key>
+            <PropertyRef Name="Task_ID" />
+          </Key>
+          <Property Name="Task_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="TaskType" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Task_Description" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="Assigned_Date" Type="DateTime" Precision="0" />
+          <Property Name="Deadline" Type="DateTime" Precision="0" />
+          <Property Name="Completion_Date" Type="DateTime" Precision="0" />
+          <NavigationProperty Name="Staffs" Relationship="Self.FK__Staff__Task_ID__3F466844" FromRole="Task" ToRole="Staff" />
+          <NavigationProperty Name="Teacher_Task" Relationship="Self.FK__Teacher_T__Task___6166761E" FromRole="Task" ToRole="Teacher_Task" />
+        </EntityType>
+        <EntityType Name="Teacher">
+          <Key>
+            <PropertyRef Name="Teacher_ID" />
+          </Key>
+          <Property Name="Teacher_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="First_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Last_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Full_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Gender" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Fathers_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Mothers_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Address" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Mobile" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="DOB" Type="DateTime" Precision="0" />
+          <Property Name="Marital_Status" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Blood_Group" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Country" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Religoin" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Recruited_Session" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Group" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Designation" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Status" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Status_Time_From" Type="DateTime" Precision="0" />
+          <Property Name="Status_Time_To" Type="DateTime" Precision="0" />
+          <Property Name="Last_Login_Date" Type="DateTime" Precision="0" />
+          <Property Name="Pasword" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Joined_Date" Type="DateTime" Precision="0" />
+          <Property Name="Resigned_Date" Type="DateTime" Precision="0" />
+          <NavigationProperty Name="Admission_Exam_Result" Relationship="Self.FK__Admission__Viva___02FC7413" FromRole="Teacher" ToRole="Admission_Exam_Result" />
+          <NavigationProperty Name="Admission_Exam_Result1" Relationship="Self.FK__Admission__Writt__03F0984C" FromRole="Teacher" ToRole="Admission_Exam_Result" />
+          <NavigationProperty Name="Images" Relationship="Self.FK__Image__Teacher_I__04E4BC85" FromRole="Teacher" ToRole="Image" />
+          <NavigationProperty Name="Teacher_Task" Relationship="Self.FK__Teacher_T__Teach__05D8E0BE" FromRole="Teacher" ToRole="Teacher_Task" />
+        </EntityType>
+        <EntityType Name="Teacher_Task">
+          <Key>
+            <PropertyRef Name="Task_ID" />
+          </Key>
+          <Property Name="Task_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Teacher_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Task" Relationship="Self.FK__Teacher_T__Task___6166761E" FromRole="Teacher_Task" ToRole="Task" />
+          <NavigationProperty Name="Teacher" Relationship="Self.FK__Teacher_T__Teach__05D8E0BE" FromRole="Teacher_Task" ToRole="Teacher" />
+        </EntityType>
+        <EntityType Name="Tracker">
+          <Key>
+            <PropertyRef Name="Traking_Name" />
+          </Key>
+          <Property Name="Traking_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Tracking_Number" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Staff">
+          <Key>
+            <PropertyRef Name="Staff_ID" />
+          </Key>
+          <Property Name="Staff_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Task_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Attendance_Date" Type="DateTime" Precision="3" />
+          <Property Name="First_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Last_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Full_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Gender" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Fathers_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Mothers_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Address" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Mobile" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="DOB" Type="DateTime" Precision="0" />
+          <Property Name="Blood_Group" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Country" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Religoin" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Recruited_Session" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Designation" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Status" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Status_Time_From" Type="DateTime" Precision="0" />
+          <Property Name="Status_Time_To" Type="DateTime" Precision="0" />
+          <Property Name="Joined_Date" Type="DateTime" Precision="0" />
+          <Property Name="Resigned_Date" Type="DateTime" Precision="0" />
+          <NavigationProperty Name="Attendance" Relationship="Self.FK__Staff__Attendanc__3E52440B" FromRole="Staff" ToRole="Attendance" />
+          <NavigationProperty Name="Task" Relationship="Self.FK__Staff__Task_ID__3F466844" FromRole="Staff" ToRole="Task" />
+        </EntityType>
+        <Association Name="FK__Admission__Admis__4CA06362">
+          <End Role="Admission_Student" Type="Self.Admission_Student" Multiplicity="0..1" />
+          <End Role="Admission_Exam_Result" Type="Self.Admission_Exam_Result" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Admission_Student">
+              <PropertyRef Name="Admission_Student_ID" />
+            </Principal>
+            <Dependent Role="Admission_Exam_Result">
+              <PropertyRef Name="Admission_Student_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Admission__Viva___02FC7413">
+          <End Role="Teacher" Type="Self.Teacher" Multiplicity="0..1" />
+          <End Role="Admission_Exam_Result" Type="Self.Admission_Exam_Result" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Teacher">
+              <PropertyRef Name="Teacher_ID" />
+            </Principal>
+            <Dependent Role="Admission_Exam_Result">
+              <PropertyRef Name="Viva_Examiner_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Admission__Writt__03F0984C">
+          <End Role="Teacher" Type="Self.Teacher" Multiplicity="0..1" />
+          <End Role="Admission_Exam_Result" Type="Self.Admission_Exam_Result" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Teacher">
+              <PropertyRef Name="Teacher_ID" />
+            </Principal>
+            <Dependent Role="Admission_Exam_Result">
+              <PropertyRef Name="Written_Examiner_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Admissoin__Admis__4D94879B">
+          <End Role="Admission_Student" Type="Self.Admission_Student" Multiplicity="0..1" />
+          <End Role="Admissoin_Time_Fees_Yearly" Type="Self.Admissoin_Time_Fees_Yearly" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Admission_Student">
+              <PropertyRef Name="Admission_Student_ID" />
+            </Principal>
+            <Dependent Role="Admissoin_Time_Fees_Yearly">
+              <PropertyRef Name="Admission_Student_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Image__Admission__5DCAEF64">
+          <End Role="Admission_Student" Type="Self.Admission_Student" Multiplicity="0..1" />
+          <End Role="Image" Type="Self.Image" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Admission_Student">
+              <PropertyRef Name="Admission_Student_ID" />
+            </Principal>
+            <Dependent Role="Image">
+              <PropertyRef Name="Admission_Student_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Student__Admissi__4E88ABD4">
+          <End Role="Admission_Student" Type="Self.Admission_Student" Multiplicity="0..1" />
+          <End Role="Student" Type="Self.Student" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Admission_Student">
+              <PropertyRef Name="Admission_Student_ID" />
+            </Principal>
+            <Dependent Role="Student">
+              <PropertyRef Name="Admissin_Student_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Staff__Attendanc__3E52440B">
+          <End Role="Attendance" Type="Self.Attendance" Multiplicity="0..1" />
+          <End Role="Staff" Type="Self.Staff" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Attendance">
+              <PropertyRef Name="Attendance_Date" />
+            </Principal>
+            <Dependent Role="Staff">
+              <PropertyRef Name="Attendance_Date" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Grade__Classroom__2F10007B">
+          <End Role="Classroom" Type="Self.Classroom" Multiplicity="0..1" />
+          <End Role="Grade" Type="Self.Grade" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Classroom">
+              <PropertyRef Name="Classroom_ID" />
+            </Principal>
+            <Dependent Role="Grade">
+              <PropertyRef Name="Classroom_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Subject__Grade_I__31EC6D26">
+          <End Role="Grade" Type="Self.Grade" Multiplicity="0..1" />
+          <End Role="Subject" Type="Self.Subject" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Grade">
+              <PropertyRef Name="Grade_ID" />
+            </Principal>
+            <Dependent Role="Subject">
+              <PropertyRef Name="Grade_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Image__Teacher_I__04E4BC85">
+          <End Role="Teacher" Type="Self.Teacher" Multiplicity="0..1" />
+          <End Role="Image" Type="Self.Image" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Teacher">
+              <PropertyRef Name="Teacher_ID" />
+            </Principal>
+            <Dependent Role="Image">
+              <PropertyRef Name="Teacher_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Result__Subject___34C8D9D1">
+          <End Role="Subject" Type="Self.Subject" Multiplicity="0..1" />
+          <End Role="Result" Type="Self.Result" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Subject">
+              <PropertyRef Name="Subject_ID" />
+            </Principal>
+            <Dependent Role="Result">
+              <PropertyRef Name="Subject_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Staff__Task_ID__3F466844">
+          <End Role="Task" Type="Self.Task" Multiplicity="0..1" />
+          <End Role="Staff" Type="Self.Staff" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Task">
+              <PropertyRef Name="Task_ID" />
+            </Principal>
+            <Dependent Role="Staff">
+              <PropertyRef Name="Task_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Teacher_T__Task___6166761E">
+          <End Role="Task" Type="Self.Task" Multiplicity="1" />
+          <End Role="Teacher_Task" Type="Self.Teacher_Task" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="Task">
+              <PropertyRef Name="Task_ID" />
+            </Principal>
+            <Dependent Role="Teacher_Task">
+              <PropertyRef Name="Task_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Teacher_T__Teach__05D8E0BE">
+          <End Role="Teacher" Type="Self.Teacher" Multiplicity="0..1" />
+          <End Role="Teacher_Task" Type="Self.Teacher_Task" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Teacher">
+              <PropertyRef Name="Teacher_ID" />
+            </Principal>
+            <Dependent Role="Teacher_Task">
+              <PropertyRef Name="Teacher_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Student_Subject">
+          <End Role="Student" Type="Self.Student" Multiplicity="*" />
+          <End Role="Subject" Type="Self.Subject" Multiplicity="*" />
+        </Association>
+        <EntityContainer Name="StudentDBEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Accounts" EntityType="Self.Account" />
+          <EntitySet Name="Admins" EntityType="Self.Admin" />
+          <EntitySet Name="Admission_Exam_Result" EntityType="Self.Admission_Exam_Result" />
+          <EntitySet Name="Admission_Student" EntityType="Self.Admission_Student" />
+          <EntitySet Name="Admissoin_Time_Fees_Yearly" EntityType="Self.Admissoin_Time_Fees_Yearly" />
+          <EntitySet Name="Attendances" EntityType="Self.Attendance" />
+          <EntitySet Name="Classrooms" EntityType="Self.Classroom" />
+          <EntitySet Name="Grades" EntityType="Self.Grade" />
+          <EntitySet Name="Images" EntityType="Self.Image" />
+          <EntitySet Name="Inventories" EntityType="Self.Inventory" />
+          <EntitySet Name="Regular_Fees" EntityType="Self.Regular_Fees" />
+          <EntitySet Name="Results" EntityType="Self.Result" />
+          <EntitySet Name="Students" EntityType="Self.Student" />
+          <EntitySet Name="Subjects" EntityType="Self.Subject" />
+          <EntitySet Name="Tasks" EntityType="Self.Task" />
+          <EntitySet Name="Teachers" EntityType="Self.Teacher" />
+          <EntitySet Name="Teacher_Task" EntityType="Self.Teacher_Task" />
+          <EntitySet Name="Trackers" EntityType="Self.Tracker" />
+          <EntitySet Name="Staffs" EntityType="Self.Staff" />
+          <AssociationSet Name="FK__Admission__Admis__4CA06362" Association="Self.FK__Admission__Admis__4CA06362">
+            <End Role="Admission_Student" EntitySet="Admission_Student" />
+            <End Role="Admission_Exam_Result" EntitySet="Admission_Exam_Result" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Admission__Viva___02FC7413" Association="Self.FK__Admission__Viva___02FC7413">
+            <End Role="Teacher" EntitySet="Teachers" />
+            <End Role="Admission_Exam_Result" EntitySet="Admission_Exam_Result" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Admission__Writt__03F0984C" Association="Self.FK__Admission__Writt__03F0984C">
+            <End Role="Teacher" EntitySet="Teachers" />
+            <End Role="Admission_Exam_Result" EntitySet="Admission_Exam_Result" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Admissoin__Admis__4D94879B" Association="Self.FK__Admissoin__Admis__4D94879B">
+            <End Role="Admission_Student" EntitySet="Admission_Student" />
+            <End Role="Admissoin_Time_Fees_Yearly" EntitySet="Admissoin_Time_Fees_Yearly" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Image__Admission__5DCAEF64" Association="Self.FK__Image__Admission__5DCAEF64">
+            <End Role="Admission_Student" EntitySet="Admission_Student" />
+            <End Role="Image" EntitySet="Images" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Student__Admissi__4E88ABD4" Association="Self.FK__Student__Admissi__4E88ABD4">
+            <End Role="Admission_Student" EntitySet="Admission_Student" />
+            <End Role="Student" EntitySet="Students" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Staff__Attendanc__3E52440B" Association="Self.FK__Staff__Attendanc__3E52440B">
+            <End Role="Attendance" EntitySet="Attendances" />
+            <End Role="Staff" EntitySet="Staffs" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Grade__Classroom__2F10007B" Association="Self.FK__Grade__Classroom__2F10007B">
+            <End Role="Classroom" EntitySet="Classrooms" />
+            <End Role="Grade" EntitySet="Grades" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Subject__Grade_I__31EC6D26" Association="Self.FK__Subject__Grade_I__31EC6D26">
+            <End Role="Grade" EntitySet="Grades" />
+            <End Role="Subject" EntitySet="Subjects" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Image__Teacher_I__04E4BC85" Association="Self.FK__Image__Teacher_I__04E4BC85">
+            <End Role="Teacher" EntitySet="Teachers" />
+            <End Role="Image" EntitySet="Images" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Result__Subject___34C8D9D1" Association="Self.FK__Result__Subject___34C8D9D1">
+            <End Role="Subject" EntitySet="Subjects" />
+            <End Role="Result" EntitySet="Results" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Staff__Task_ID__3F466844" Association="Self.FK__Staff__Task_ID__3F466844">
+            <End Role="Task" EntitySet="Tasks" />
+            <End Role="Staff" EntitySet="Staffs" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Teacher_T__Task___6166761E" Association="Self.FK__Teacher_T__Task___6166761E">
+            <End Role="Task" EntitySet="Tasks" />
+            <End Role="Teacher_Task" EntitySet="Teacher_Task" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Teacher_T__Teach__05D8E0BE" Association="Self.FK__Teacher_T__Teach__05D8E0BE">
+            <End Role="Teacher" EntitySet="Teachers" />
+            <End Role="Teacher_Task" EntitySet="Teacher_Task" />
+          </AssociationSet>
+          <AssociationSet Name="Student_Subject" Association="Self.Student_Subject">
+            <End Role="Student" EntitySet="Students" />
+            <End Role="Subject" EntitySet="Subjects" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="StudentDBModelStoreContainer" CdmEntityContainer="StudentDBEntities">
+          <EntitySetMapping Name="Accounts">
+            <EntityTypeMapping TypeName="StudentDBModel.Account">
+              <MappingFragment StoreEntitySet="Accounts">
+                <ScalarProperty Name="Transaction_ID" ColumnName="Transaction_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Admins">
+            <EntityTypeMapping TypeName="StudentDBModel.Admin">
+              <MappingFragment StoreEntitySet="Admin">
+                <ScalarProperty Name="Admin_ID" ColumnName="Admin_ID" />
+                <ScalarProperty Name="Admin_Role" ColumnName="Admin_Role" />
+                <ScalarProperty Name="First_Name" ColumnName="First_Name" />
+                <ScalarProperty Name="Last_Name" ColumnName="Last_Name" />
+                <ScalarProperty Name="Full_Name" ColumnName="Full_Name" />
+                <ScalarProperty Name="Gender" ColumnName="Gender" />
+                <ScalarProperty Name="Fathers_Name" ColumnName="Fathers_Name" />
+                <ScalarProperty Name="Mothers_Name" ColumnName="Mothers_Name" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="DOB" ColumnName="DOB" />
+                <ScalarProperty Name="Blood_Group" ColumnName="Blood_Group" />
+                <ScalarProperty Name="Country" ColumnName="Country" />
+                <ScalarProperty Name="Religoin" ColumnName="Religoin" />
+                <ScalarProperty Name="Recruited_Session" ColumnName="Recruited_Session" />
+                <ScalarProperty Name="Designation" ColumnName="Designation" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="Marital_Status" ColumnName="Marital_Status" />
+                <ScalarProperty Name="Status_Time_From" ColumnName="Status_Time_From" />
+                <ScalarProperty Name="Status_Time_To" ColumnName="Status_Time_To" />
+                <ScalarProperty Name="Last_Login_Date" ColumnName="Last_Login_Date" />
+                <ScalarProperty Name="Pasword" ColumnName="Pasword" />
+                <ScalarProperty Name="Joined_Date" ColumnName="Joined_Date" />
+                <ScalarProperty Name="Resigned_Date" ColumnName="Resigned_Date" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Admission_Exam_Result">
+            <EntityTypeMapping TypeName="StudentDBModel.Admission_Exam_Result">
+              <MappingFragment StoreEntitySet="Admission_Exam_Result">
+                <ScalarProperty Name="Admission_Exam_ID" ColumnName="Admission_Exam_ID" />
+                <ScalarProperty Name="Admission_Student_ID" ColumnName="Admission_Student_ID" />
+                <ScalarProperty Name="Writtern_Exam_Mark" ColumnName="Writtern_Exam_Mark" />
+                <ScalarProperty Name="Viva_Exam_Mark" ColumnName="Viva_Exam_Mark" />
+                <ScalarProperty Name="Written_Examiner_ID" ColumnName="Written_Examiner_ID" />
+                <ScalarProperty Name="Viva_Examiner_ID" ColumnName="Viva_Examiner_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Admission_Student">
+            <EntityTypeMapping TypeName="StudentDBModel.Admission_Student">
+              <MappingFragment StoreEntitySet="Admission_Student">
+                <ScalarProperty Name="Admission_Student_ID" ColumnName="Admission_Student_ID" />
+                <ScalarProperty Name="First_Name" ColumnName="First_Name" />
+                <ScalarProperty Name="Last_Name" ColumnName="Last_Name" />
+                <ScalarProperty Name="Full_Name" ColumnName="Full_Name" />
+                <ScalarProperty Name="Gender" ColumnName="Gender" />
+                <ScalarProperty Name="Fathers_Name" ColumnName="Fathers_Name" />
+                <ScalarProperty Name="Mothers_Name" ColumnName="Mothers_Name" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="DOB" ColumnName="DOB" />
+                <ScalarProperty Name="Blood_Group" ColumnName="Blood_Group" />
+                <ScalarProperty Name="Country" ColumnName="Country" />
+                <ScalarProperty Name="Religion" ColumnName="Religion" />
+                <ScalarProperty Name="Admission_Session" ColumnName="Admission_Session" />
+                <ScalarProperty Name="Current_School" ColumnName="Current_School" />
+                <ScalarProperty Name="Current_Grade" ColumnName="Current_Grade" />
+                <ScalarProperty Name="Interested_Grade" ColumnName="Interested_Grade" />
+                <ScalarProperty Name="Group" ColumnName="Group" />
+                <ScalarProperty Name="Registered_Date" ColumnName="Registered_Date" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Admissoin_Time_Fees_Yearly">
+            <EntityTypeMapping TypeName="StudentDBModel.Admissoin_Time_Fees_Yearly">
+              <MappingFragment StoreEntitySet="Admissoin_Time_Fees_Yearly">
+                <ScalarProperty Name="Admission_Fees_ID" ColumnName="Admission_Fees_ID" />
+                <ScalarProperty Name="Admission_Student_ID" ColumnName="Admission_Student_ID" />
+                <ScalarProperty Name="Admisson_Fee" ColumnName="Admisson_Fee" />
+                <ScalarProperty Name="Development_Fee" ColumnName="Development_Fee" />
+                <ScalarProperty Name="Maintainance_Fee" ColumnName="Maintainance_Fee" />
+                <ScalarProperty Name="Library_Fee" ColumnName="Library_Fee" />
+                <ScalarProperty Name="Medical_Fee" ColumnName="Medical_Fee" />
+                <ScalarProperty Name="IDCard_Fee" ColumnName="IDCard_Fee" />
+                <ScalarProperty Name="Late_Fine" ColumnName="Late_Fine" />
+                <ScalarProperty Name="Receipt_Print_Time" ColumnName="Receipt_Print_Time" />
+                <ScalarProperty Name="Transaction_Time" ColumnName="Transaction_Time" />
+                <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Attendances">
+            <EntityTypeMapping TypeName="StudentDBModel.Attendance">
+              <MappingFragment StoreEntitySet="Attendance">
+                <ScalarProperty Name="Attendance_Date" ColumnName="Attendance_Date" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Classrooms">
+            <EntityTypeMapping TypeName="StudentDBModel.Classroom">
+              <MappingFragment StoreEntitySet="Classroom">
+                <ScalarProperty Name="Classroom_ID" ColumnName="Classroom_ID" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Grades">
+            <EntityTypeMapping TypeName="StudentDBModel.Grade">
+              <MappingFragment StoreEntitySet="Grade">
+                <ScalarProperty Name="Grade_ID" ColumnName="Grade_ID" />
+                <ScalarProperty Name="Classroom_ID" ColumnName="Classroom_ID" />
+                <ScalarProperty Name="Group" ColumnName="Group" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Images">
+            <EntityTypeMapping TypeName="StudentDBModel.Image">
+              <MappingFragment StoreEntitySet="Image">
+                <ScalarProperty Name="Image_ID" ColumnName="Image_ID" />
+                <ScalarProperty Name="Admission_Student_ID" ColumnName="Admission_Student_ID" />
+                <ScalarProperty Name="Teacher_ID" ColumnName="Teacher_ID" />
+                <ScalarProperty Name="Image_Path" ColumnName="Image_Path" />
+                <ScalarProperty Name="Saved_Date" ColumnName="Saved_Date" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Inventories">
+            <EntityTypeMapping TypeName="StudentDBModel.Inventory">
+              <MappingFragment StoreEntitySet="Inventory">
+                <ScalarProperty Name="Inventory_ID" ColumnName="Inventory_ID" />
+                <ScalarProperty Name="Printer" ColumnName="Printer" />
+                <ScalarProperty Name="Computer" ColumnName="Computer" />
+                <ScalarProperty Name="Mouse" ColumnName="Mouse" />
+                <ScalarProperty Name="Keyboard" ColumnName="Keyboard" />
+                <ScalarProperty Name="Projector" ColumnName="Projector" />
+                <ScalarProperty Name="Camera" ColumnName="Camera" />
+                <ScalarProperty Name="Whiteboard" ColumnName="Whiteboard" />
+                <ScalarProperty Name="Marker" ColumnName="Marker" />
+                <ScalarProperty Name="Pencil" ColumnName="Pencil" />
+                <ScalarProperty Name="Clock" ColumnName="Clock" />
+                <ScalarProperty Name="Paperbundle" ColumnName="Paperbundle" />
+                <ScalarProperty Name="Pen" ColumnName="Pen" />
+                <ScalarProperty Name="Duster" ColumnName="Duster" />
+                <ScalarProperty Name="Geometrybox" ColumnName="Geometrybox" />
+                <ScalarProperty Name="Ruler" ColumnName="Ruler" />
+                <ScalarProperty Name="Chair" ColumnName="Chair" />
+                <ScalarProperty Name="Bench" ColumnName="Bench" />
+                <ScalarProperty Name="Table" ColumnName="Table" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Regular_Fees">
+            <EntityTypeMapping TypeName="StudentDBModel.Regular_Fees">
+              <MappingFragment StoreEntitySet="Regular_Fees">
+                <ScalarProperty Name="Regular_Fees_ID" ColumnName="Regular_Fees_ID" />
+                <ScalarProperty Name="Monthly_Fee" ColumnName="Monthly_Fee" />
+                <ScalarProperty Name="Exam_Fee" ColumnName="Exam_Fee" />
+                <ScalarProperty Name="Late_Fine" ColumnName="Late_Fine" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Results">
+            <EntityTypeMapping TypeName="StudentDBModel.Result">
+              <MappingFragment StoreEntitySet="Result">
+                <ScalarProperty Name="Result_ID" ColumnName="Result_ID" />
+                <ScalarProperty Name="Subject_ID" ColumnName="Subject_ID" />
+                <ScalarProperty Name="Mid" ColumnName="Mid" />
+                <ScalarProperty Name="Final" ColumnName="Final" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Students">
+            <EntityTypeMapping TypeName="StudentDBModel.Student">
+              <MappingFragment StoreEntitySet="Student">
+                <ScalarProperty Name="Student_ID" ColumnName="Student_ID" />
+                <ScalarProperty Name="Admissin_Student_ID" ColumnName="Admissin_Student_ID" />
+                <ScalarProperty Name="Student_Status" ColumnName="Student_Status" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Subjects">
+            <EntityTypeMapping TypeName="StudentDBModel.Subject">
+              <MappingFragment StoreEntitySet="Subject">
+                <ScalarProperty Name="Subject_ID" ColumnName="Subject_ID" />
+                <ScalarProperty Name="Subject_Name" ColumnName="Subject_Name" />
+                <ScalarProperty Name="Grade_ID" ColumnName="Grade_ID" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tasks">
+            <EntityTypeMapping TypeName="StudentDBModel.Task">
+              <MappingFragment StoreEntitySet="Task">
+                <ScalarProperty Name="Task_ID" ColumnName="Task_ID" />
+                <ScalarProperty Name="TaskType" ColumnName="TaskType" />
+                <ScalarProperty Name="Task_Description" ColumnName="Task_Description" />
+                <ScalarProperty Name="Assigned_Date" ColumnName="Assigned_Date" />
+                <ScalarProperty Name="Deadline" ColumnName="Deadline" />
+                <ScalarProperty Name="Completion_Date" ColumnName="Completion_Date" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Teachers">
+            <EntityTypeMapping TypeName="StudentDBModel.Teacher">
+              <MappingFragment StoreEntitySet="Teacher">
+                <ScalarProperty Name="Teacher_ID" ColumnName="Teacher_ID" />
+                <ScalarProperty Name="First_Name" ColumnName="First_Name" />
+                <ScalarProperty Name="Last_Name" ColumnName="Last_Name" />
+                <ScalarProperty Name="Full_Name" ColumnName="Full_Name" />
+                <ScalarProperty Name="Gender" ColumnName="Gender" />
+                <ScalarProperty Name="Fathers_Name" ColumnName="Fathers_Name" />
+                <ScalarProperty Name="Mothers_Name" ColumnName="Mothers_Name" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="DOB" ColumnName="DOB" />
+                <ScalarProperty Name="Marital_Status" ColumnName="Marital_Status" />
+                <ScalarProperty Name="Blood_Group" ColumnName="Blood_Group" />
+                <ScalarProperty Name="Country" ColumnName="Country" />
+                <ScalarProperty Name="Religoin" ColumnName="Religoin" />
+                <ScalarProperty Name="Recruited_Session" ColumnName="Recruited_Session" />
+                <ScalarProperty Name="Group" ColumnName="Group" />
+                <ScalarProperty Name="Designation" ColumnName="Designation" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="Status_Time_From" ColumnName="Status_Time_From" />
+                <ScalarProperty Name="Status_Time_To" ColumnName="Status_Time_To" />
+                <ScalarProperty Name="Last_Login_Date" ColumnName="Last_Login_Date" />
+                <ScalarProperty Name="Pasword" ColumnName="Pasword" />
+                <ScalarProperty Name="Joined_Date" ColumnName="Joined_Date" />
+                <ScalarProperty Name="Resigned_Date" ColumnName="Resigned_Date" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Teacher_Task">
+            <EntityTypeMapping TypeName="StudentDBModel.Teacher_Task">
+              <MappingFragment StoreEntitySet="Teacher_Task">
+                <ScalarProperty Name="Task_ID" ColumnName="Task_ID" />
+                <ScalarProperty Name="Teacher_ID" ColumnName="Teacher_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Trackers">
+            <EntityTypeMapping TypeName="StudentDBModel.Tracker">
+              <MappingFragment StoreEntitySet="Tracker">
+                <ScalarProperty Name="Traking_Name" ColumnName="Traking_Name" />
+                <ScalarProperty Name="Tracking_Number" ColumnName="Tracking_Number" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Staffs">
+            <EntityTypeMapping TypeName="StudentDBModel.Staff">
+              <MappingFragment StoreEntitySet="Staff">
+                <ScalarProperty Name="Staff_ID" ColumnName="Staff_ID" />
+                <ScalarProperty Name="Task_ID" ColumnName="Task_ID" />
+                <ScalarProperty Name="Attendance_Date" ColumnName="Attendance_Date" />
+                <ScalarProperty Name="First_Name" ColumnName="First_Name" />
+                <ScalarProperty Name="Last_Name" ColumnName="Last_Name" />
+                <ScalarProperty Name="Full_Name" ColumnName="Full_Name" />
+                <ScalarProperty Name="Gender" ColumnName="Gender" />
+                <ScalarProperty Name="Fathers_Name" ColumnName="Fathers_Name" />
+                <ScalarProperty Name="Mothers_Name" ColumnName="Mothers_Name" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="DOB" ColumnName="DOB" />
+                <ScalarProperty Name="Blood_Group" ColumnName="Blood_Group" />
+                <ScalarProperty Name="Country" ColumnName="Country" />
+                <ScalarProperty Name="Religoin" ColumnName="Religoin" />
+                <ScalarProperty Name="Recruited_Session" ColumnName="Recruited_Session" />
+                <ScalarProperty Name="Designation" ColumnName="Designation" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="Status_Time_From" ColumnName="Status_Time_From" />
+                <ScalarProperty Name="Status_Time_To" ColumnName="Status_Time_To" />
+                <ScalarProperty Name="Joined_Date" ColumnName="Joined_Date" />
+                <ScalarProperty Name="Resigned_Date" ColumnName="Resigned_Date" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <AssociationSetMapping Name="Student_Subject" TypeName="StudentDBModel.Student_Subject" StoreEntitySet="Student_Subject">
+            <EndProperty Name="Student">
+              <ScalarProperty Name="Student_ID" ColumnName="Student_ID" />
+            </EndProperty>
+            <EndProperty Name="Subject">
+              <ScalarProperty Name="Subject_ID" ColumnName="Subject_ID" />
+            </EndProperty>
+          </AssociationSetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

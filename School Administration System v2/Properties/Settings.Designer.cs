@@ -26,8 +26,8 @@ namespace School_Administration_System_v2.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-5BN9EJ4\\SQLEXPRESS;Initial Catalog=StudentDB;Integrated Secur" +
-            "ity=True;Encrypt=False;TrustServerCertificate=True")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=ROBIN\\SQLEXPRESS;Initial Catalog=StudentDB;Integrated Security=True;E" +
+            "ncrypt=False;TrustServerCertificate=True")]
         public string StudentDBConnectionString3 {
             get {
                 return ((string)(this["StudentDBConnectionString3"]));

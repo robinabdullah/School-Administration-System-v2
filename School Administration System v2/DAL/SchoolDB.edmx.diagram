@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="6aef3a1b1021429b87ad079acdfff04e" Name="Diagram1" ZoomLevel="86">
+        <EntityTypeShape EntityType="StudentDBModel.Account" Width="1.5" PointX="5.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="StudentDBModel.Admin" Width="1.5" PointX="8.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="StudentDBModel.Admission_Exam_Result" Width="1.5" PointX="3" PointY="4.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="StudentDBModel.Admission_Student" Width="1.5" PointX="0.75" PointY="13.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="StudentDBModel.Admissoin_Time_Fees_Yearly" Width="1.5" PointX="3" PointY="13.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="StudentDBModel.Attendance" Width="1.5" PointX="3.75" PointY="10.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="StudentDBModel.Classroom" Width="1.5" PointX="0.75" PointY="20.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="StudentDBModel.Grade" Width="1.5" PointX="3" PointY="20.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="StudentDBModel.Image" Width="1.5" PointX="6" PointY="4.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="StudentDBModel.Inventory" Width="1.5" PointX="8.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="StudentDBModel.Regular_Fees" Width="1.5" PointX="2.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="StudentDBModel.Result" Width="1.5" PointX="7.5" PointY="17.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="StudentDBModel.Student" Width="1.5" PointX="3" PointY="17.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="StudentDBModel.Subject" Width="1.5" PointX="5.25" PointY="17.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="StudentDBModel.Task" Width="1.5" PointX="0.75" PointY="10.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="StudentDBModel.Teacher" Width="1.5" PointX="0.75" PointY="2.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="StudentDBModel.Teacher_Task" Width="1.5" PointX="3" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="StudentDBModel.Tracker" Width="1.5" PointX="10.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="StudentDBModel.Staff" Width="1.5" PointX="6" PointY="8.5" IsExpanded="true" />
+        <AssociationConnector Association="StudentDBModel.FK__Admission__Admis__4CA06362" ManuallyRouted="false" />
+        <AssociationConnector Association="StudentDBModel.FK__Admission__Viva___02FC7413" ManuallyRouted="false" />
+        <AssociationConnector Association="StudentDBModel.FK__Admission__Writt__03F0984C" ManuallyRouted="false" />
+        <AssociationConnector Association="StudentDBModel.FK__Admissoin__Admis__4D94879B" ManuallyRouted="false" />
+        <AssociationConnector Association="StudentDBModel.FK__Image__Admission__5DCAEF64" ManuallyRouted="false" />
+        <AssociationConnector Association="StudentDBModel.FK__Student__Admissi__4E88ABD4" ManuallyRouted="false" />
+        <AssociationConnector Association="StudentDBModel.FK__Staff__Attendanc__3E52440B" ManuallyRouted="false" />
+        <AssociationConnector Association="StudentDBModel.FK__Grade__Classroom__2F10007B" ManuallyRouted="false" />
+        <AssociationConnector Association="StudentDBModel.FK__Subject__Grade_I__31EC6D26" ManuallyRouted="false" />
+        <AssociationConnector Association="StudentDBModel.FK__Image__Teacher_I__04E4BC85" ManuallyRouted="false" />
+        <AssociationConnector Association="StudentDBModel.FK__Result__Subject___34C8D9D1" ManuallyRouted="false" />
+        <AssociationConnector Association="StudentDBModel.FK__Staff__Task_ID__3F466844" ManuallyRouted="false" />
+        <AssociationConnector Association="StudentDBModel.FK__Teacher_T__Task___6166761E" ManuallyRouted="false" />
+        <AssociationConnector Association="StudentDBModel.FK__Teacher_T__Teach__05D8E0BE" ManuallyRouted="false" />
+        <AssociationConnector Association="StudentDBModel.Student_Subject" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -12,7 +12,7 @@
             <ColumnDefinition Width="130*"/>
             <ColumnDefinition Width="401*"/>
         </Grid.ColumnDefinitions>
-        <Image x:Name="___School_Administration_System_v2_component_fcaM4Mo_jpg" Margin="0,0,10,0" Source="/School Administration System v2;component/fcaM4Mo.jpg" Stretch="Fill" Grid.ColumnSpan="2"/>
+        <Image x:Name="___School_Administration_System_v2_component_fcaM4Mo_jpg" Source="/School Administration System v2;component/fcaM4Mo.jpg" Stretch="Fill" Grid.ColumnSpan="2"/>
         <Label Content="User:" Margin="150,147,834,412" VerticalAlignment="Stretch" FontSize="72" Height="93" Grid.ColumnSpan="2"/>
         <Label Content="Password:" Margin="0,0,765,272" VerticalAlignment="Bottom" FontSize="72" Height="93" RenderTransformOrigin="0,0" HorizontalAlignment="Right" Width="358"  Grid.ColumnSpan="2"/>
         <TextBox x:Name="UserName" Grid.Column="1" Margin="193,175,126.8,0" TextWrapping="Wrap" FontSize="66" Height="93" VerticalAlignment="Top" TextChanged="TextBox_TextChanged_1" Text="1"/>
